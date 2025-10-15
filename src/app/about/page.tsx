@@ -1,24 +1,20 @@
-import { ReactElement } from "react";
-import type { Metadata } from "next";
-import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
-import AboutSection from "@/components/DesignAgency/AboutSection";
 import VideoSection from "@/components/DesignAgency/About/VideoSection";
+import AboutSection from "@/components/DesignAgency/AboutSection";
+import BlogSection from "@/components/DesignAgency/BlogSection";
 import BrandSection from "@/components/DesignAgency/BrandSection";
+import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
 import TeamsSection from "@/components/DesignAgency/TeamSection";
 import TextSliderSection from "@/components/DesignAgency/TextSliderSection";
-import BlogSection from "@/components/DesignAgency/BlogSection";
-import FooterSection from "@/components/DesignAgency/FooterSection";
-import Header from "@/components/DesignAgency/common/Header";
-import SmoothScroll from "@/components/DesignAgency/Animation/SmoothScroll";
+import type { Metadata } from "next";
+import { ReactElement } from "react";
 
 // component data
 import aboutData from "@/constant/DesignAgency/about";
 import videoData from "@/constant/DesignAgency/About/video";
+import blogData from "@/constant/DesignAgency/blog";
 import brandData from "@/constant/DesignAgency/brand";
 import teamData from "@/constant/DesignAgency/team";
 import textSliderData from "@/constant/DesignAgency/text-slider";
-import blogData from "@/constant/DesignAgency/blog";
-import footerData from "@/constant/DesignAgency/footer";
 
 export const metadata: Metadata = {
   title: "About Us || Averto - Creative Digital Agency NextJS Template",

@@ -2,8 +2,7 @@ import {
   authorInfo,
   IRecentBlog,
   ISocialLink,
-  popularTags,
-  recentBlogs,
+  recentBlogs
 } from "@/constant/DesignAgency/blog/sidebarData";
 import Link from "next/link";
 import React from "react";

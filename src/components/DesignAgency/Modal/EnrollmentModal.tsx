@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
+import { useEffect, useRef, useState } from "react";
 
 interface FormData {
   name: string;
@@ -23,49 +23,45 @@ const EnrollmentModal = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const hasTriggeredRef = useRef(false);
 
-  useEffect(() => {
-    // Ellenőrizzük, hogy már bezárta-e korábban a felhasználó
-    const modalClosed = localStorage.getItem("enrollmentModalClosed");
-    if (modalClosed === "true") return;
+useEffect(() => {
+  const modalClosed = localStorage.getItem("enrollmentModalClosed");
+  if (modalClosed === "true") return;
 
-    // Ha már megjelent egyszer ebben a sessionben, ne ismételjük meg
+  if (hasTriggeredRef.current) return;
+
+  let scrollTimeout: NodeJS.Timeout;
+
+  const handleScroll = () => {
     if (hasTriggeredRef.current) return;
 
-    let scrollTimeout: NodeJS.Timeout;
-    let timeTimeout: NodeJS.Timeout;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const scrollPercentage =
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
 
-    const handleScroll = () => {
-      if (hasTriggeredRef.current) return;
-
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        const scrollPercentage =
-          (window.scrollY /
-            (document.documentElement.scrollHeight - window.innerHeight)) *
-          100;
-
-        // Modal megjelenítése 30% görgetés után
-        if (scrollPercentage > 30 && !isVisible) {
-          showModal();
-        }
-      }, 150);
-    };
-
-    // Modal megjelenítése 15 másodperc után
-    timeTimeout = setTimeout(() => {
-      if (!hasTriggeredRef.current) {
+      if (scrollPercentage > 30 && !isVisible) {
         showModal();
       }
-    }, 15000);
+    }, 150);
+  };
 
-    window.addEventListener("scroll", handleScroll);
+  // Declare as const here
+  const timeTimeout = setTimeout(() => {
+    if (!hasTriggeredRef.current) {
+      showModal();
+    }
+  }, 15000);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(scrollTimeout);
-      clearTimeout(timeTimeout);
-    };
-  }, [isVisible]);
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    clearTimeout(scrollTimeout);
+    clearTimeout(timeTimeout);
+  };
+}, [isVisible]);
 
   const showModal = () => {
     hasTriggeredRef.current = true;

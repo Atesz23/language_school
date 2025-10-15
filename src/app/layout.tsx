@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // Font import hozzáadása
-import { Instrument_Sans, Poppins, DM_Sans } from "next/font/google";
+import { DM_Sans, Instrument_Sans, Poppins } from "next/font/google";
 
 // Bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,12 +13,12 @@ import "yet-another-react-lightbox/styles.css";
 
 // swiper slider css
 import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "swiper/css/effect-cards";
 import "swiper/css/thumbs";
-import "swiper/css/free-mode";
 
 // Nice-select2 css
 import "nice-select2/dist/css/nice-select2.css";
@@ -29,15 +29,15 @@ import "@/scss/style.scss";
 // Globals css - UTOLJÁRA importáljuk hogy felülírja a többit
 import "./globals.css";
 
-import ScrollTopWrapper from "@/components/ScrollTopWrapper";
-import AnimationProvider from "@/providers/AnimationProvider";
-import { Toaster } from "react-hot-toast";
 import SmoothScroll from "@/components/DesignAgency/Animation/SmoothScroll";
 import FooterSection from "@/components/DesignAgency/FooterSection";
 import HeaderSection from "@/components/DesignAgency/HeaderSection";
-import headerData from "@/constant/DesignAgency/header";
-import footerData from "@/constant/DesignAgency/footer";
 import EnrollmentModal from "@/components/DesignAgency/Modal/EnrollmentModal";
+import ScrollTopWrapper from "@/components/ScrollTopWrapper";
+import footerData from "@/constant/DesignAgency/footer";
+import headerData from "@/constant/DesignAgency/header";
+import AnimationProvider from "@/providers/AnimationProvider";
+import { Toaster } from "react-hot-toast";
 
 // Font konfigurálása
 const instrumentSans = Instrument_Sans({
