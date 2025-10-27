@@ -25,7 +25,7 @@ const Sidebar = ({
             <div className="offset-widget offset-header">
               <div className="offset-logo">
                 <Link href="/design-agency">
-                  <img src={sidebarData.logo} alt="site logo" />
+                  <img src={sidebarData.logo} alt="site logo" style={{width:"150px",maxWidth:"unset"}}/>
                 </Link>
               </div>
               <button
@@ -42,38 +42,7 @@ const Sidebar = ({
               <NestedAccordion items={sidebarData.menus} />
             </div>
 
-            {/* Info Box */}
-            <div className="offset-info-box">
-              <h2 className="title">{sidebarData?.title}</h2>
-              <p className="text">{sidebarData?.description}</p>
-              <div className="t-btn-group">
-                <Link
-                  className="t-btn t-btn-circle"
-                  href={sidebarData?.cta?.href}
-                >
-                  <i className={sidebarData?.ctaIcon}></i>
-                </Link>
-                <Link
-                  className="t-btn t-btn-primary"
-                  href={sidebarData?.cta?.href}
-                >
-                  {sidebarData?.cta?.text}
-                </Link>
-                <Link
-                  className="t-btn t-btn-circle"
-                  href={sidebarData?.cta?.href}
-                >
-                  <i className={sidebarData?.ctaIcon}></i>
-                </Link>
-              </div>
-
-              {/* Gallery */}
-              <div className="post-image">
-                {sidebarData?.gallery?.map((img, i) => (
-                  <img key={i} src={img} alt={`gallery-${i}`} />
-                ))}
-              </div>
-            </div>
+      
 
             {/* Contact Info */}
             <div className="offset-widget-box">
@@ -112,9 +81,9 @@ const Sidebar = ({
             </div>
 
             {/* Footer Logo */}
-            <div className="offset-logo-footer">
+            {/* <div className="offset-logo-footer">
               <img src={sidebarData.footerLogo} alt="footer logo" />
-            </div>
+            </div> */}
           </div>
         </div>
       </aside>

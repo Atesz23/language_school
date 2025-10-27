@@ -41,59 +41,16 @@ export interface SidebarData {
 
 const sidebar: SidebarData = {
 
-  logo: "/assets/imgs/logo/logo.png",
+  logo: "/assets/imgs/logo/language_logo_Dark.png",
   menus: [
-    {
-      label: "Home",
-      children: [
-        { label: "Creative Agency", href: "/creative-agency" },
-        { label: "Design Agency", href: "/design-agency" },
-        { label: "Digital Agency", href: "/digital-agency" },
-        { label: "AI Agency", href: "/ai-agency" },
-        { label: "Marketing Agency", href: "/marketing-agency" },
-      ],
-    },
-    {
-      label: "Pages",
-      children: [
-        { label: "About Us", href: "/design-agency/about" },
-        {
-          label: "Service",
-          children: [
-            { label: "Services", href: "/design-agency/services" },
-            { label: "Service Details", href: "/design-agency/service-details" },
-          ],
-        },
-        {
-          label: "Portfolio Pages",
-          children: [
-            { label: "Portfolio", href: "/design-agency/portfolio" },
-            { label: "Portfolio 02", href: "/design-agency/portfolio-02" },
-            { label: "Portfolio 03", href: "/design-agency/portfolio-03" },
-            { label: "Portfolio Details", href: "/design-agency/portfolio-details" },
-          ],
-        },
-        { label: "Team", href: "/design-agency/team" },
-        {
-          label: "Blog Pages",
-          children: [
-            { label: "Blog", href: "/design-agency/blog" },
-            { label: "Blog Grid", href: "/design-agency/blog-grid" },
-            { label: "Blog Details", href: "/design-agency/blog-details" },
-          ],
-        },
-        { label: "FAQ", href: "/design-agency/faq" },
-        { label: "Contact", href: "/design-agency/contact" },
-      ],
-    },
-    {
-      label: "Portfolio",
-      children: [
-        { label: "Portfolio", href: "/design-agency/portfolio" },
-        { label: "Portfolio Details", href: "/design-agency/portfolio-details" },
-      ],
-    },
-    { label: "Contact Us", href: "/design-agency/contact" },
+
+ { label: "Despre noi", href: "/about" },
+   { label: "Cursuri", href: "/courses" },
+   { label: "Examene", href: "/exam" },
+
+   { label: "Blog", href: "/blog" },
+   { label: "Faq", href: "/faq" },
+   { label: "Contact", href: "/contact" },
   ],
   closeIcon: "fas fa-times",
   title: "Hello There!",
@@ -111,15 +68,15 @@ const sidebar: SidebarData = {
     "/assets/imgs/gallery/image-51.webp",
   ],
   contact: {
-    phone: { text: "+2230 6965 119", href: "tel:+22306965119" },
-    email: { text: "averto@gmail.com", href: "mailto:averto@gmail.com" },
-    address: "Avenue de Roma 1588, Lisboa",
+    phone: { text: "+40 769 049 473", href: "tel:+40769049473" },
+    email: { text: "info@languagecenter.ro", href: "info@languagecenter.ro" },
+    address: "Târgu Mureș,str. Dr. Knöpfler Vilmos nr. 2-4,",
   },
   social: [
-    { label: "FB", href: "#" },
-    { label: "LN", href: "#" },
-    { label: "IN", href: "#" },
-    { label: "BE", href: "#" },
+    { label: "FB", href: "https://www.facebook.com/profile.php?id=100063656467576" },
+    { label: "IN", href: "https://www.instagram.com/languageschool_08/" },
+    { label: "YT", href: "https://www.youtube.com/@Languageschool_08" },
+    { label: "TT", href: "https://www.tiktok.com/@languageschool08" },
   ],
   footerLogo: "/assets/imgs/logo/logo-6.png",
 };
