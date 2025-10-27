@@ -2,7 +2,7 @@ import {
   authorInfo,
   IRecentBlog,
   ISocialLink,
-  recentBlogs
+  recentBlogs,
 } from "@/constant/DesignAgency/blog/sidebarData";
 import Link from "next/link";
 import React from "react";
@@ -14,7 +14,7 @@ const BlogSidebar: React.FC = () => {
         {/* Author Info Box */}
         <div className="author-info">
           <div className="thumb">
-            <img src={authorInfo?.image} alt="Author" />
+            <img src={authorInfo?.image} alt="Autor" />
           </div>
           <div className="content">
             <h3 className="name">{authorInfo?.name}</h3>
@@ -35,14 +35,14 @@ const BlogSidebar: React.FC = () => {
      
       {/* Recent Blogs Box */}
       <div className="blog-sidebar-box fade-anim" suppressHydrationWarning={true}>
-        <h3 className="title-box">Recent blogs</h3>
+        <h3 className="title-box">Articole recente</h3>
         <div className="blogs-wrapper">
           {recentBlogs.map((blog: IRecentBlog, idx: number) => (
             <article className="blog" key={idx}>
               <div className="thumb">
-                <a href={blog?.url}>
-                  <img src={blog?.image} alt="Recent Blog" />
-                </a>
+                <Link href={blog?.url}>
+                  <img src={blog?.image} alt="Articol recent" />
+                </Link>
               </div>
               <div className="content-wrapper">
                 <div className="content">
@@ -50,7 +50,7 @@ const BlogSidebar: React.FC = () => {
                     <span className="date">{blog?.date}</span>
                   </div>
                   <h2 className="title">
-                    <a href={blog?.url}>{blog?.title}</a>
+                    <Link href={blog?.url}>{blog?.title}</Link>
                   </h2>
                 </div>
               </div>

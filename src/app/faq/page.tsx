@@ -1,65 +1,53 @@
-import { ReactElement } from "react";
-import { Metadata } from "next";
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
-import FaqSection from "@/components/DesignAgency/Faq/FaqSection";
 import ContactSection from "@/components/DesignAgency/Contact/ContactSection";
-import FooterSection from "@/components/DesignAgency/FooterSection";
-import Header from "@/components/DesignAgency/common/Header";
-import SmoothScroll from "@/components/DesignAgency/Animation/SmoothScroll";
+import FaqSection from "@/components/DesignAgency/Faq/FaqSection";
+import { Metadata } from "next";
+import { ReactElement } from "react";
 
-// all data 
-import footerData from "@/constant/DesignAgency/footer";
+// all data
 import contactData from "@/constant/DesignAgency/Contact/contact";
-import faqData  from "@/constant/DesignAgency/faq/faq-data";
+import faqData from "@/constant/DesignAgency/faq/faq-data";
 
 export const metadata: Metadata = {
-  title: "FAQ || Averto - Creative Digital Agency NextJS Template",
+  title: "Întrebări Frecvente || Language Center Cluj & Mureș - FAQ Cursuri și Examene",
   description:
-    "Find answers to frequently asked questions about Averto, our Next.js templates, and services. Get quick support and clear information to help you make the most of our agency solutions.",
+    "Găsește răspunsuri la cele mai frecvente întrebări despre cursurile Language Center. Informații despre niveluri, taxe, examene Cambridge, IELTS, ÖSD, ECL, modalități de înscriere și program de cursuri în Cluj-Napoca și Târgu Mureș.",
   keywords: [
-    "Averto FAQ page",
-    "NextJS FAQ template",
-    "agency frequently asked questions",
-    "customer support FAQ",
-    "digital agency FAQ",
-    "startup FAQ page",
-    "common questions",
-    "template support",
-    "NextJS support page",
-    "responsive FAQ design",
-    "professional FAQ layout",
-    "help and support",
-    "template information",
-    "client questions",
-    "FAQ page design",
+    "FAQ Language Center",
+    "întrebări frecvente cursuri limbi",
+    "întrebări cursuri engleză",
+    "întrebări examene Cambridge",
+    "cât costă cursurile de limbi",
+    "cum mă înscriu la curs",
+    "niveluri limbi străine",
+    "durată cursuri limbi",
+    "taxe cursuri Language Center",
+    "program cursuri Cluj",
+    "program cursuri Mureș",
+    "examene internaționale FAQ",
+    "echivalare Bacalaureat întrebări",
+    "profesori nativi întrebări",
+    "cursuri online vs prezențial",
+    "materiale didactice incluse",
+    "certificat absolvire curs",
+    "grupuri cursuri limbi",
+    "cursuri individuale vs grup",
+    "politică anulare cursuri",
   ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "FAQ Page",
-  },
+  creator: "Language Center Cluj & Mureș",
 };
-
 const Home = (): ReactElement => {
   return (
-    <div className="body-wrapper body-inner-page">
-      <div className="body-design-agency">
-      <Header />
-      </div>
-      <SmoothScroll>
-        <main>
-          <div className="body-design-agency">
-          <Breadcrumb title="AGENCY" subTitle="FAQ’s" pageName="AGENCY FAQ’s" />
-          <FaqSection data={faqData}/>
-          <ContactSection data={contactData}/>
-          <FaqSection type={2} imageSrc={2} data={faqData}/>
-          </div>
-        </main>
-        <div className="body-design-agency">
-        <FooterSection data={footerData}/>
-        </div>
-      </SmoothScroll>
-    </div>
+    <>
+      <Breadcrumb
+        title="FAQ"
+        subTitle="Întrebări frecvente"
+        pageName="Întrebări frecvente"
+      />
+      <FaqSection data={faqData} />
+      {/* <ContactSection data={contactData} />
+      <FaqSection type={2} imageSrc={2} data={faqData} /> */}
+    </>
   );
 };
 export default Home;

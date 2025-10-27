@@ -21,7 +21,7 @@ const infoData: InfoData = {
   title: "Centru Autorizat ÖSD pentru Limba Germană",
   description:
     "Centru autorizat pentru pregătirea examenelor ÖSD și TestDaF. Oferim cursuri de limba germană de la nivel A1 până la C2, cu profesori nativi și materiale didactice exclusive create de echipa noastră.",
-  contactLink: "/cursuri/germana",
+  contactLink: "/courses",
   stats: [
     { number: 1000, suffix: "+", label: "Persoane formate la cursurile de germană" },
     { number: 50, suffix: "+", label: "Companii cărora le-am livrat cursuri" },

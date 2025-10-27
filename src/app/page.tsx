@@ -28,30 +28,80 @@ import testimonialData from "@/constant/DesignAgency/testimonial";
 import workData from "@/constant/DesignAgency/work";
 
 export const metadata: Metadata = {
-  title: "Design Agency || Averto - Creative Digital Agency NextJS Template",
+  title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine și Examene Internaționale",
   description:
-    "Averto Design Agency template offers a sleek and modern homepage layout tailored for design agencies. Highlight your portfolio, services, and creative expertise with fast performance and SEO-friendly structure.",
+    "Language Center oferă cursuri profesionale de limbi străine în Cluj-Napoca și Târgu Mureș. Centru autorizat pentru examene Cambridge, IELTS, ÖSD și ECL. Pregătire pentru Bacalaureat și certificate internaționale recunoscute în 130+ țări.",
   keywords: [
-    "Averto design agency",
-    "NextJS design agency template",
-    "design agency homepage",
-    "modern design website",
-    "creative design portfolio",
-    "digital design agency",
-    "responsive design agency site",
-    "SEO optimized design agency",
-    "NextJS startup template",
-    "professional design agency",
-    "design services showcase",
-    "agency landing page",
-    "creative project showcase",
-    "frontend development",
-    "design firm website",
+    "cursuri limbi străine Cluj",
+    "cursuri limbi străine Târgu Mureș",
+    "Language Center Cluj",
+    "Language Center Mureș",
+    "cursuri engleză Cluj-Napoca",
+    "cursuri germană Târgu Mureș",
+    "școală de limbi Cluj",
+    "școală de limbi Mureș",
+    "examene Cambridge România",
+    "examene IELTS Cluj",
+    "examene ÖSD Mureș",
+    "examene ECL România",
+    "certificate internaționale limbi străine",
+    "pregătire Bacalaureat limbi străine",
+    "cursuri spaniolă Cluj",
+    "cursuri franceză Mureș",
+    "cursuri italiană Cluj-Napoca",
+    "cursuri japoneză România",
+    "cursuri română pentru străini",
+    "cursuri maghiară Cluj",
+    "centru examinare Cambridge",
+    "certificare lingvistică internațională",
+    "cursuri online limbi străine",
+    "cursuri prezențial limbi străine",
+    "profesori nativi limbi străine",
   ],
-  creator: "PixaVation",
+  creator: "Language Center Cluj & Mureș",
+  authors: [{ name: "Language Center Cluj & Mureș" }],
+  openGraph: {
+    title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine",
+    description:
+      "Învață limbi străine cu profesori experimentați. Centru autorizat pentru examene Cambridge, IELTS, ÖSD și ECL. Cursuri pentru toate nivelurile în Cluj-Napoca și Târgu Mureș.",
+    url: "https://www.languagecenter.ro",
+    siteName: "Language Center Cluj & Mureș",
+    locale: "ro_RO",
+    type: "website",
+    images: [
+      {
+        url: "/assets/imgs/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Language Center Cluj & Mureș",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine",
+    description:
+      "Învață limbi străine cu profesori experimentați. Centru autorizat pentru examene Cambridge, IELTS, ÖSD și ECL.",
+    images: ["/assets/imgs/twitter-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   other: {
-    developer: "PixaVation",
-    section: "Design Agency Page",
+    "contact:email": "info@languagecenter.ro",
+    "contact:phone_cluj": "0775 249 850",
+    "contact:phone_mures": "0769 049 473",
+    "contact:address_cluj": "Strada Carmen Silva 1-3, Cluj-Napoca, România",
+    "contact:address_mures": "Str. Dr. Knöpfler Vilmos nr. 2-4, Târgu Mureș, România",
+    section: "Language School Homepage",
   },
 };
 
@@ -62,16 +112,17 @@ const Home = (): ReactElement => {
 
       <BrandSection data={brandData} />
 
-      <AboutSection data={aboutData} />
-      <VideoSection data={videoData} />
-      <AwardsSection data={awardData} />
-      <ProcessSection data={processData} />
-      <ServiceSection data={serviceData} />
-
-      <WorkSection data={workData} />
-      <TestimonialSection data={testimonialData} />
-      <TeamSection data={teamData} />
+      <AboutSection />
       <InfoSection data={infoData} />
+
+      <AwardsSection data={awardData} />
+      
+      {/* <ServiceSection data={serviceData} /> */}
+      <VideoSection data={videoData} />
+      <WorkSection  />
+      <TestimonialSection data={testimonialData} />
+      <ProcessSection data={processData} />
+      {/* <TeamSection data={teamData} /> */}
 
       <BlogSection data={blogData} />
     </>

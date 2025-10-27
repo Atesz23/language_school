@@ -13,7 +13,7 @@ const ProcessSection: React.FC<ProcessProps> = ({type, data: processData }) => {
   return (
     <section className="process-area-2">
       <div className="container">
-      <div className={`process-area-2-inner ${type === "v2" ? "section-spacing" : "section-spacing-top"}`}>
+      <div className={`process-area-2-inner section-spacing`}>
           <div className="section-header">
             <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
               <div className="subtitle-wrapper">

@@ -17,11 +17,11 @@ const headerData = {
    
     { label: "Despre noi", href: "/about" },
    { label: "Cursuri", href: "/courses" },
-   { label: "Parteneri", href: "/partners" },
-   { label: "Teste", href: "/test" },
+   { label: "Examene", href: "/exam" },
+
    { label: "Blog", href: "/blog" },
    { label: "Faq", href: "/faq" },
-   { label: "Contact", href: "/cotnact" },
+   { label: "Contact", href: "/contact" },
   ],
 };
 

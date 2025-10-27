@@ -7,11 +7,11 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
   return (
     <footer className="footer-area-2">
       {/* CTA Section */}
-      <div className="cta-area fade-anim" suppressHydrationWarning={true}>
+      <div className="cta-area">
         <div className="container">
           <div className="cta-area-inner">
             <div className="section-header">
-              <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
+              <div className="section-title-wrapper" >
                 <div className="subtitle-wrapper">
                   <span className="section-subtitle light">
                     {footerData?.cta?.subtitle}
@@ -21,14 +21,14 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                   <h2 className="section-title">{footerData?.cta?.title}</h2>
                 </div>
               </div>
-              <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
-                 <Link
+              <div className="btn-wrapper" >
+                 {/* <Link
                     className="t-btn t-btn-primary"
                     href={footerData?.cta?.href || "/"}
                   >
                     {footerData?.cta?.btnText}
-                  </Link>
-                {/* <div className="t-btn-group">
+                  </Link> */}
+                <div className="t-btn-group">
                   <Link
                     className="t-btn t-btn-circle"
                     href={footerData?.cta?.href || "/"}
@@ -47,7 +47,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                   >
                     <i className={footerData?.cta?.icon}></i>
                   </Link>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ interface FaqProps {
 }
 
 const FaqSection:React.FC<FaqProps> = ({ type, imageSrc: img,data:faqData }) => {
-  const imageSrc1 = "/assets/imgs/gallery/image-21.webp";
+  const imageSrc1 = "/assets/imgs/gallery/faq.png";
   const imageSrc2 = "/assets/imgs/gallery/image-22.webp";
   const imageSrc = img === 2 ? imageSrc2 : imageSrc1;
 
@@ -36,10 +36,10 @@ const FaqSection:React.FC<FaqProps> = ({ type, imageSrc: img,data:faqData }) => 
             >
               <div className="section-title-wrapper">
                 <div className="subtitle-wrapper">
-                  <span className="section-subtitle">Have any questions?</span>
+                  <span className="section-subtitle">Ai întrebări?</span>
                 </div>
                 <div className="title-wrapper">
-                  <h2 className="section-title">Discover answers in FAQ’s</h2>
+                  <h2 className="section-title">Găsește răspunsurile în secțiunea noastră FAQ</h2>
                 </div>
               </div>
 

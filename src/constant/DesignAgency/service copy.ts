@@ -25,7 +25,7 @@ const serviceData: ServiceData = {
       title: "Limba Germană",
       titleNative: "Deutsch lernen", // Învață germană
       number: "//001",
-      link: "/cursuri/germana",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/german-1.webp",
       thumb2: "/assets/imgs/languages/german-2.webp",
@@ -37,7 +37,7 @@ const serviceData: ServiceData = {
       title: "Limba Engleză",
       titleNative: "Let's speak English", // Hai să vorbim engleză
       number: "//002",
-      link: "/cursuri/engleza",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/english-1.webp",
       thumb2: "/assets/imgs/languages/english-2.webp",
@@ -49,7 +49,7 @@ const serviceData: ServiceData = {
       title: "Limba Spaniolă",
       titleNative: "¡Vamos a hablar!", // Hai să vorbim!
       number: "//003",
-      link: "/cursuri/spaniola",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/spanish-1.webp",
       thumb2: "/assets/imgs/languages/spanish-2.webp",
@@ -61,7 +61,7 @@ const serviceData: ServiceData = {
       title: "Limba Italiană",
       titleNative: "Ciao bello!", // Salut frumos!
       number: "//004",
-      link: "/cursuri/italiana",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/italian-1.webp",
       thumb2: "/assets/imgs/languages/italian-2.webp",
@@ -73,7 +73,7 @@ const serviceData: ServiceData = {
       title: "Limba Japoneză",
       titleNative: "日本語を話そう", // Nihongo wo hanasou - Vorbim japoneză
       number: "//005",
-      link: "/cursuri/japoneza",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/japanese-1.webp",
       thumb2: "/assets/imgs/languages/japanese-2.webp",
@@ -85,7 +85,7 @@ const serviceData: ServiceData = {
       title: "Limba Franceză",
       titleNative: "Parlons français", // Vorbim franceză
       number: "//006",
-      link: "/cursuri/franceza",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/french-1.webp",
       thumb2: "/assets/imgs/languages/french-2.webp",
@@ -97,7 +97,7 @@ const serviceData: ServiceData = {
       title: "Limba Română",
       titleNative: "Bine ai venit!", // Bine ai venit!
       number: "//007",
-      link: "/cursuri/romana",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/romanian-1.webp",
       thumb2: "/assets/imgs/languages/romanian-2.webp",
@@ -109,7 +109,7 @@ const serviceData: ServiceData = {
       title: "Limba Maghiară",
       titleNative: "Szia! Tanulj magyarul", // Szia! Învață maghiară
       number: "//008",
-      link: "/cursuri/maghiara",
+      link: "/courses",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
       thumb: "/assets/imgs/languages/hungarian-1.webp",
       thumb2: "/assets/imgs/languages/hungarian-2.webp",

@@ -1,65 +1,56 @@
 import VideoSection from "@/components/DesignAgency/About/VideoSection";
 import AboutSection from "@/components/DesignAgency/AboutSection";
 import BlogSection from "@/components/DesignAgency/BlogSection";
-import BrandSection from "@/components/DesignAgency/BrandSection";
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
-import TeamsSection from "@/components/DesignAgency/TeamSection";
 import TextSliderSection from "@/components/DesignAgency/TextSliderSection";
 import type { Metadata } from "next";
 import { ReactElement } from "react";
 
 // component data
-import aboutData from "@/constant/DesignAgency/about";
 import videoData from "@/constant/DesignAgency/About/video";
 import blogData from "@/constant/DesignAgency/blog";
-import brandData from "@/constant/DesignAgency/brand";
-import teamData from "@/constant/DesignAgency/team";
 import textSliderData from "@/constant/DesignAgency/text-slider";
 
 export const metadata: Metadata = {
-  title: "About Us || Averto - Creative Digital Agency NextJS Template",
+  title: "Despre Noi || Language Center Cluj & Mureș - Centru Autorizat de Examene",
   description:
-    "Explore the About Us page of Averto – a modern, high-performance agency template built with Next.js. Meet the team, learn our mission, and discover why Averto is trusted by creative professionals and businesses.",
+    "Fondată în 2008, Language Center este școală dedicată exclusiv educației lingvistice. Centru autorizat pentru Cambridge, IELTS, ÖSD și ECL. Parteneri cu European Examinations Centre București.",
   keywords: [
-    "Averto About Us",
-    "NextJS about page",
-    "agency template",
-    "digital agency",
-    "creative team template",
-    "business website template",
-    "responsive NextJS template",
-    "modern agency design",
-    "SEO friendly template",
-    "professional web agency",
-    "agency team page",
-    "company profile",
-    "NextJS clean UI",
-    "startup website",
-    "web design agency",
-    "agency portfolio",
-    "fast NextJS website",
-    "customizable template",
-    "about page design",
-    "Averto template",
+    "Language Center despre noi",
+    "școală limbi străine Cluj",
+    "școală limbi străine Mureș",
+    "centru autorizat Cambridge",
+    "centru autorizat IELTS",
+    "centru examinare ÖSD",
+    "centru examinare ECL",
+    "European Examinations Centre",
+    "istorie Language Center",
+    "echipa Language Center",
+    "profesori nativi",
+    "școală de limbi autorizată",
+    "educație lingvistică România",
+    "cursuri limbi străine Cluj-Napoca",
+    "cursuri limbi străine Târgu Mureș",
+    "certificare internațională limbi",
+    "școală de engleză autorizată",
+    "școală de germană autorizată",
+    "misiune Language Center",
+    "valori Language Center",
   ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "About Page",
-  },
+  creator: "Language Center Cluj & Mureș",
 };
 
 const AboutPage = (): ReactElement => {
   return (
     <>
       <div className="body-design-agency">
-        <Breadcrumb title="ABOUT" subTitle="Agency" pageName="ABOUT AGENCY" />
-        <AboutSection data={aboutData} />
+        <Breadcrumb title="DESPRE NOI" subTitle="Language Center" pageName="DESPRE LANGUAGE CENTER" />
+        <AboutSection />
       </div>
       <VideoSection data={videoData} />
       <div className="body-design-agency">
-        <BrandSection data={brandData} brandSix={true} />
-        <TeamsSection data={teamData} />
+        {/* <BrandSection data={brandData} brandSix={true} /> */}
+        {/* <TeamsSection data={teamData} /> */}
         <TextSliderSection data={textSliderData} />
         <BlogSection data={blogData} />
       </div>

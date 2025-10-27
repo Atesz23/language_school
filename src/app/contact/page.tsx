@@ -1,50 +1,55 @@
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
-import ChooseUsSection from "@/components/DesignAgency/common/ChooseUsSection";
 import ContactMetaSection from "@/components/DesignAgency/Contact/ContactMetaSection";
 import ContactSection from "@/components/DesignAgency/Contact/ContactSection";
 import { Metadata } from "next";
 import { ReactElement } from "react";
 
 // all data
-import chooseUsData from "@/constant/DesignAgency/common/choose-us";
 import contactData from "@/constant/DesignAgency/Contact/contact";
 
 export const metadata: Metadata = {
-  title: "Contact || Școala de Limbi - Învață limbi străine cu noi",
+  title: "Contact || Language Center Cluj & Mureș - Contactează-ne pentru Cursuri de Limbi",
   description:
-    "Contactează-ne! Te așteptăm în două locații din București. Scrie-ne, sună-ne sau vizitează-ne personal la oricare dintre școlile noastre.",
+    "Contactează Language Center! Suntem disponibili în Cluj-Napoca (Strada Carmen Silva 1-3) și Târgu Mureș (Str. Dr. Knöpfler Vilmos 2-4). Sună-ne la 0775 249 850 (Cluj) sau 0769 049 473 (Mureș). Scrie-ne la info@languagecenter.ro.",
   keywords: [
-    "școală de limbi contact",
-    "învățare limbi străine București",
-    "școală de limbi contact",
-    "curs de limbi străine",
-    "școală de engleză",
-    "școală de germană",
-    "învățare limbi străine",
-    "pregătire examen de limbă",
-    "limbă pentru afaceri",
-    "școală de limbi București centru",
-    "cursuri de limbi",
-    "profesor nativ",
+    "contact Language Center",
+    "Language Center Cluj contact",
+    "Language Center Mureș contact",
+    "telefon Language Center Cluj",
+    "telefon Language Center Mureș",
+    "adresă Language Center Cluj-Napoca",
+    "adresă Language Center Târgu Mureș",
+    "email Language Center",
+    "programare curs limbi străine",
+    "informații înscriere cursuri",
+    "școală limbi străine Cluj contact",
+    "școală limbi străine Mureș contact",
+    "Strada Carmen Silva Cluj",
+    "Dr. Knöpfler Vilmos Mureș",
+    "0775 249 850",
+    "0769 049 473",
+    "officecluj@languagecenter.ro",
+    "officemures@languagecenter.ro",
+    "harta Language Center",
+    "locație școală de limbi",
   ],
-  creator: "Școala de Limbi",
+  creator: "Language Center Cluj & Mureș",
 };
 
 const Home = (): ReactElement => {
   return (
     <>
-      <div className="body-design-agency">
-        <Breadcrumb
+      <Breadcrumb
           title="Contact"
           subTitle="Language school"
           pageName="CONTACTEAZĂ-NE"
         />
+        <ContactSection data={contactData} />
         <ContactMetaSection />
-      </div>
-      <ContactSection data={contactData} />
-      <div className="body-design-agency">
+      
+      {/* <div className="body-design-agency">
         <ChooseUsSection chooseUSTwo={true} data={chooseUsData} />
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,4 +1,4 @@
-export interface IService {
+export interface IExam {
   id: number;
   title: string;
   number: string;
@@ -7,62 +7,73 @@ export interface IService {
   thumb: string;
   thumb2: string;
   description: string;
+  languages?: string;
+  levels?: string;
 }
 
-export interface ServiceData {
+export interface ExamData {
   subtitle: string;
   title: string;
-  services: IService[];
+  exams: IExam[];
 }
-const serviceData: ServiceData = {
-  subtitle: "OUR SERVICES",
-  title: "Covering the whole spectrum",
-  services: [
+
+const examData: ExamData = {
+  subtitle: "CERTIFICĂRI INTERNAȚIONALE",
+  title: "Examene pe care le poți susține la noi",
+  exams: [
     {
-      id:1,
-      title: "UI/UX Design",
+      id: 1,
+      title: "Cambridge",
       number: "//001",
-      link: "/design-agency/service-details",
+      link: "/examene/cambridge",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
-      thumb: "/assets/imgs/gallery/image-32.webp",
-      thumb2: "/assets/imgs/gallery/image-33.webp",
+      thumb: "/assets/imgs/exam/1.png",
+      thumb2: "/assets/imgs/exam/1.png",
       description:
-        "Lectus aliquam tincidunt netus sit nunc orci placerat gravida fusce sed amet",
+        "Certificate recunoscute internațional pentru limba engleză, de la nivel de începător până la avansat.",
+      levels: "Starters, Movers, Flyers, KET, PET, FCE, CAE, CPE",
+      languages: "Engleză",
     },
     {
-      id:2,
-      title: "Motion Design",
+      id: 2,
+      title: "IELTS",
       number: "//002",
-      link: "/design-agency/service-details",
+      link: "/examene/ielts",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
-      thumb: "/assets/imgs/gallery/image-37.webp",
-      thumb2: "/assets/imgs/gallery/image-38.webp",
+      thumb: "/assets/imgs/exam/2.png",
+      thumb2: "/assets/imgs/exam/2.png",
       description:
-        "Lectus aliquam tincidunt netus sit nunc orci placerat gravida fusce sed amet",
+        "Examenul internațional de limba engleză acceptat de peste 11.000 de organizații din întreaga lume pentru studii, muncă și imigrare.",
+      levels: "Academic & General Training",
+      languages: "Engleză",
     },
     {
-      id:3,
-      title: "App Design",
+      id: 3,
+      title: "ÖSD",
       number: "//003",
-      link: "/design-agency/service-details",
+      link: "/examene/osd",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
-      thumb: "/assets/imgs/gallery/image-39.webp",
-      thumb2: "/assets/imgs/gallery/image-40.webp",
+      thumb: "/assets/imgs/exam/3.png",
+      thumb2: "/assets/imgs/exam/3.png",
       description:
-        "Lectus aliquam tincidunt netus sit nunc orci placerat gravida fusce sed amet",
+        "Certificat austriac de limba germană recunoscut internațional, valabil pentru studii și muncă în țările germanofone.",
+      levels: "A1 - C2",
+      languages: "Germană",
     },
     {
-      id:4,
-      title: "Branding Design",
+      id: 4,
+      title: "ECL",
       number: "//004",
-      link: "/design-agency/service-details",
+      link: "/examene/ecl",
       shapeImage: "/assets/imgs/shape/shape-40.webp",
-      thumb: "/assets/imgs/gallery/image-41.webp",
-      thumb2: "/assets/imgs/gallery/image-42.webp",
+      thumb: "/assets/imgs/exam/4.png",
+      thumb2: "/assets/imgs/exam/4.png",
       description:
-        "Lectus aliquam tincidunt netus sit nunc orci placerat gravida fusce sed amet",
+        "Certificat european de competență lingvistică disponibil în mai multe limbi, recunoscut de universități și angajatori.",
+      levels: "A2 - C1",
+      languages: "Engleză, Germană, Maghiară, Română, Spaniolă",
     },
   ],
 };
-export default serviceData;
 
+export default examData;

@@ -83,8 +83,6 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
 
   return (
     <>
-
-
       <section className="contact-area">
         <div className="container">
           <div className="contact-area-inner section-spacing">
@@ -256,16 +254,18 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                       />
                     </div>
 
-                    <div className="submit-btn">
-                      <button type="submit" className="t-btn t-btn-group">
-                        <span className="t-btn t-btn-circle">
+                    <div className="btn-wrapper w-100 d-flex align-items-center">
+                      <div className="t-btn-group mt-4">
+                        <button type="submit" className="t-btn t-btn-circle">
                           <i className="fa-solid fa-arrow-right"></i>
-                        </span>
-                        <span className="t-btn t-btn-primary">{buttonText}</span>
-                        <span className="t-btn t-btn-circle">
+                        </button>
+                        <button type="submit" className="t-btn t-btn-primary">
+                          {buttonText}
+                        </button>
+                        <button type="submit" className="t-btn t-btn-circle">
                           <i className="fa-solid fa-arrow-right"></i>
-                        </span>
-                      </button>
+                        </button>
+                      </div>
                     </div>
                   </form>
                 </div>

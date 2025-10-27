@@ -12,19 +12,32 @@ import CoursesSection from "@/components/DesignAgency/CoursesSection";
 import BrandSectionFlag from "@/components/CreativeAgency/BrandSection";
 
 export const metadata: Metadata = {
-  title: "Cursuri Limbi Străine || Language Center Cluj & Mureș",
+  title: "Cursuri Limbi Străine || Language Center Cluj & Mureș - Online și Prezențial",
   description:
-    "Descoperă cursurile noastre de limbi străine: Germană, Engleză, Spaniolă, Italiană, Franceză, Japoneză, Română, Maghiară. Online sau prezențial, individual sau în grup.",
+    "Descoperă cursurile noastre de limbi străine: Engleză, Germană, Spaniolă, Italiană, Franceză, Japoneză, Română pentru străini, Maghiară. Cursuri online sau prezențiale, individuale sau în grup pentru toate nivelurile.",
   keywords: [
     "cursuri limbi străine",
-    "cursuri germană Cluj",
-    "cursuri engleză Târgu Mureș",
-    "școală limbi străine",
-    "cursuri online",
-    "cursuri prezențiale",
-    "Language Center",
+    "cursuri engleză Cluj",
+    "cursuri germană Mureș",
+    "cursuri spaniolă Cluj-Napoca",
+    "cursuri italiană Târgu Mureș",
+    "cursuri franceză Cluj",
+    "cursuri japoneză România",
+    "cursuri română pentru străini",
+    "cursuri maghiară Cluj",
+    "cursuri online limbi străine",
+    "cursuri prezențiale limbi",
+    "cursuri individuale limbă",
+    "cursuri grup limbă străină",
+    "Language Center cursuri",
+    "A1 A2 B1 B2 C1 C2",
+    "CEFR nivele limbă",
+    "cursuri business English",
+    "cursuri conversație engleză",
+    "pregătire examene limbi străine",
+    "școală de limbi Cluj-Napoca",
   ],
-  creator: "Language Center",
+  creator: "Language Center Cluj & Mureș",
 };
 
 const CoursesPage = (): ReactElement => {
@@ -36,7 +49,7 @@ const CoursesPage = (): ReactElement => {
         pageName="TOATE CURSURILE"
       />
       <CoursesSection all={true} data={coursesData} />
-      <ProcessSection type="v2" data={processData} />
+      {/* <ProcessSection type="v2" data={processData} /> */}
       <BrandSectionFlag />
     </>
   );

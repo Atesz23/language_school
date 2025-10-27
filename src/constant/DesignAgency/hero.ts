@@ -30,7 +30,7 @@ const heroData: HeroData = {
   circleTextImg: "/assets/imgs/shape/shape-12.webp",
   circleIconImg: "/assets/imgs/shape/shape-13.webp",
   mainImage: "/assets/imgs/gallery/about1.png",
-  buttonLink: "/cursuri",
+  buttonLink: "/courses",
 };
 
 

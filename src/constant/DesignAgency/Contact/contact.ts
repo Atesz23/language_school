@@ -29,8 +29,8 @@ const contactData: IContact = {
   contactInfo: [
     {
       icon: "/assets/imgs/icon/icon-17.webp",
-      label: "contact@scoaladelimbi.ro",
-      link: "mailto:contact@scoaladelimbi.ro",
+      label: "info@languagecenter.ro",
+      link: "mailto:info@languagecenter.ro",
     },
     {
       icon: "/assets/imgs/icon/icon-18.webp",

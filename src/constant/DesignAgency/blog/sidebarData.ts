@@ -33,22 +33,22 @@ export const authorInfo: IAuthorInfo = {
 
 export const recentBlogs: IRecentBlog[] = [
   {
-    title: "Our most recent updates and announcements",
+   title: "5 sfaturi pentru a învăța engleza mai rapid și eficient",
     date: "February 12, 2025",
-    image: "/assets/imgs/blog/blog-3.webp",
-    url: "/design-agency/blog-details",
+   image: "/assets/imgs/blog/1.png",
+    url:"/blog",
   },
   {
-    title: "The Art of Creative Storytelling at Averto",
+   title: "De ce germana deschide uși în cariera ta profesională",
     date: "February 12, 2025",
-    image: "/assets/imgs/blog/blog-16.webp",
-    url: "/design-agency/blog-details",
+   image: "/assets/imgs/blog/2.png",
+    url: "/blog",
   },
   {
-    title: "Elevating Your Identity with our studio",
+     title: "Span iola - a treia limbă cea mai vorbită din lume",
     date: "February 12, 2025",
-    image: "/assets/imgs/blog/blog-18.webp",
-    url: "/design-agency/blog-details",
+    image: "/assets/imgs/blog/3.png",
+    url: "/blog",
   },
 ];
 

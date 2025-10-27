@@ -7,42 +7,38 @@ import { ReactElement } from "react";
 import blogData from "@/constant/DesignAgency/blog/blogData";
 
 export const metadata: Metadata = {
-  title: "Blog || Averto - Creative Digital Agency NextJS Template",
+  title: "Blog || Language Center Cluj & Mureș - Articole și Sfaturi pentru Învățarea Limbilor",
   description:
-    "Stay updated with the latest insights, design trends, and development news from the Averto team. Our blog covers topics in web design, Next.js development, digital strategy, and agency best practices.",
+    "Citește articolele noastre despre învățarea limbilor străine, pregătirea pentru examene, sfaturi de studiu, resurse educaționale și noutăți din lumea educației lingvistice. Ghid complet pentru studenții de limbi străine.",
   keywords: [
-    "Averto blog",
-    "NextJS blog template",
-    "web design blog",
-    "agency updates",
-    "developer insights",
-    "modern blog design",
-    "NextJS articles",
-    "UI/UX blog",
-    "creative agency blog",
-    "frontend development blog",
-    "Averto template blog",
-    "technology articles",
-    "NextJS SEO blog",
-    "responsive blog layout",
-    "digital agency news",
-    "design inspiration",
-    "blog page template",
-    "startup blog",
-    "NextJS blog page",
-    "developer tips and tricks",
+    "blog limbi străine",
+    "articole învățare limbi",
+    "sfaturi învățare engleză",
+    "resurse educaționale limbi",
+    "Language Center blog",
+    "cum să înveți o limbă străină",
+    "pregătire examene Cambridge",
+    "tips IELTS",
+    "ghid învățare germană",
+    "metode învățare limbi străine",
+    "blog educațional Cluj",
+    "articole școală de limbi",
+    "noutăți educație lingvistică",
+    "sfaturi profesori nativi",
+    "resurse gratuite limbi străine",
+    "strategii învățare vocabular",
+    "gramatică engleză explicată",
+    "cultură și limbi străine",
+    "motivație învățare limbi",
+    "carieră și limbi străine",
   ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Blog Page",
-  },
+  creator: "Language Center Cluj & Mureș",
 };
 
 const Home = (): ReactElement => {
   return (
     <>
-      <Breadcrumb title="BLOGS" subTitle="Standard" pageName="BLOGS STANDARD" />
+      <Breadcrumb title="BLOG" subTitle="Articole" pageName="ARTICOLE ȘI SFATURI" />
       <BlogSection data={blogData} />
     </>
   );

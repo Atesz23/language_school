@@ -67,19 +67,22 @@ const footerData: FooterData = {
     {
       title: "Cursuri",
       links: [
-        { label: "Germană", href: "/cursuri/germana" },
-        { label: "Engleză", href: "/cursuri/engleza" },
-        { label: "Spaniolă", href: "/cursuri/spaniola" },
-        { label: "Toate limbile", href: "/cursuri" },
+        { label: "Germană", href: "/courses" },
+        { label: "Engleză", href: "/courses" },
+        { label: "Spaniolă", href: "/courses" },
+        { label: "Toate limbile", href: "/courses" },
       ],
     },
     {
       title: "Informații",
       links: [
-        { label: "Despre noi", href: "/despre" },
-        { label: "Examene & Certificate", href: "/examene" },
-        { label: "Prețuri", href: "/preturi" },
-        { label: "Întrebări frecvente", href: "/faq" },
+        { label: "Despre noi", href: "/avout" },
+        { label: "Examene ", href: "/exam" },
+        { label: "Blog", href: "/blog" },
+        
+          { label: "Întrebări frecvente", href: "/faq" },
+        { label: "Contact", href: "/contact" },
+      
       ],
     },
     {
@@ -87,12 +90,12 @@ const footerData: FooterData = {
       contacts: {
         phone: {
           label: "Sună-ne acum",
-          text: "+40 XXX XXX XXX",
-          href: "tel:+40XXXXXXXXX",
+          text: "+40 769 049 473",
+          href: "tel:+40769049473",
         },
         address: {
           label: "Locații",
-          lines: ["Cluj-Napoca, str. Exemple 15", "Târgu Mureș, str. Exemplu 20"],
+          lines: ["Târgu Mureș, str. Dr. Knöpfler Vilmos nr. 2-4,", "Cluj-Napoca,Strada Carmen Silva 1-3,"],
         },
       },
     },
@@ -101,7 +104,7 @@ const footerData: FooterData = {
     year: "2025",
     company: "Language Center",
     link: "#",
-    terms: { label: "Termeni și Condiții", href: "/termeni" },
+    terms: { label: "Termeni și Condiții", href: "/" },
   },
 };
 

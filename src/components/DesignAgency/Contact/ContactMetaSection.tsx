@@ -6,9 +6,9 @@ const ContactMetaSection: React.FC = () => {
     <div className="contact-meta-area">
       <div className="container">
         <div className="section-spacing">
-          {/* Első helyszín - Nyelviskola Belváros */}
+          {/* Első helyszín - Language Center Târgu Mureș */}
           <div className="mb-5">
-            <h2 className="text-3xl font-bold mb-4 text-center">Belvárosi Nyelviskola</h2>
+            <h2 className="text-3xl font-bold mb-4 text-center">Language Center Târgu Mureș</h2>
             <div className="meta-wrapper-box move-anim mb-4" suppressHydrationWarning={true}>
               <div className="meta-wrapper">
                 <div className="contact-meta-box">
@@ -20,10 +20,10 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="mailto:belvaros@nyelviskola.hu">belvaros@nyelviskola.hu</Link>
+                          <Link href="mailto:officemures@languagecenter.ro">officemures@languagecenter.ro</Link>
                         </li>
                         <li>
-                          <Link href="mailto:info@nyelviskola.hu">info@nyelviskola.hu</Link>
+                          <Link href="mailto:info@languagecenter.ro">info@languagecenter.ro</Link>
                         </li>
                       </ul>
                     </div>
@@ -38,10 +38,10 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="tel:+36301234567">+36 30 123 4567</Link>
+                          <Link href="tel:+40769049473">0769 049 473</Link>
                         </li>
                         <li>
-                          <Link href="tel:+3612345678">+36 1 234 5678</Link>
+                          <Link href="tel:+40365886320">0365 886 320</Link>
                         </li>
                       </ul>
                     </div>
@@ -52,13 +52,13 @@ const ContactMetaSection: React.FC = () => {
                     <img src="/assets/imgs/icon/icon-24.webp" alt="location icon" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Cím</h3>
+                    <h3 className="title">Adresă</h3>
                     <div className="meta-list">
                       <ul>
                         <li>
-                          1052 Budapest,<br />
-                          Petőfi Sándor utca 12.<br />
-                          I. emelet
+                          Târgu Mureș,<br />
+                          str. Dr. Knöpfler Vilmos nr. 2-4,<br />
+                          Județul Mureș, România
                         </li>
                       </ul>
                     </div>
@@ -66,10 +66,10 @@ const ContactMetaSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Google Maps - Belváros */}
+            {/* Google Maps - Târgu Mureș */}
             <div className="map-container mb-5">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.5447377374844!2d19.05844931573454!3d47.49315997917799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc5f8b5f3b5d%3A0x3c4a52c96f8e7e9e!2sBudapest%2C%20Pet%C5%91fi%20S%C3%A1ndor%20u.%2C%201052!5e0!3m2!1sen!2shu!4v1234567890123!5m2!1sen!2shu"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.8234567890123!2d24.5634567890123!3d46.5423456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474bb6f7a1234567%3A0x1234567890abcdef!2sStrada%20Doctor%20Kn%C3%B6pfler%20Vilmos%202-4%2C%20T%C3%A2rgu%20Mure%C8%99!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
                 width="100%"
                 height="400"
                 style={{ border: 0, borderRadius: "10px" }}
@@ -80,9 +80,9 @@ const ContactMetaSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Második helyszín - Nyelviskola Külváros */}
+          {/* Második helyszín - Language Center Cluj-Napoca */}
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-center">Külvárosi Nyelviskola</h2>
+            <h2 className="text-3xl font-bold mb-4 text-center">Language Center Cluj-Napoca</h2>
             <div className="meta-wrapper-box move-anim mb-4" suppressHydrationWarning={true}>
               <div className="meta-wrapper">
                 <div className="contact-meta-box">
@@ -94,10 +94,10 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="mailto:kulvaros@nyelviskola.hu">kulvaros@nyelviskola.hu</Link>
+                          <Link href="mailto:officecluj@languagecenter.ro">officecluj@languagecenter.ro</Link>
                         </li>
                         <li>
-                          <Link href="mailto:info@nyelviskola.hu">info@nyelviskola.hu</Link>
+                          <Link href="mailto:info@languagecenter.ro">info@languagecenter.ro</Link>
                         </li>
                       </ul>
                     </div>
@@ -112,10 +112,10 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="tel:+36307654321">+36 30 765 4321</Link>
+                          <Link href="tel:+40775249850">0775 249 850</Link>
                         </li>
                         <li>
-                          <Link href="tel:+3618765432">+36 1 876 5432</Link>
+                          <Link href="tel:+40365886320">0365 886 320</Link>
                         </li>
                       </ul>
                     </div>
@@ -126,13 +126,13 @@ const ContactMetaSection: React.FC = () => {
                     <img src="/assets/imgs/icon/icon-24.webp" alt="location icon" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Cím</h3>
+                    <h3 className="title">Adresă</h3>
                     <div className="meta-list">
                       <ul>
                         <li>
-                          1117 Budapest,<br />
-                          Bartók Béla út 45.<br />
-                          II. emelet
+                          Cluj-Napoca,<br />
+                          Strada Carmen Silva 1-3,<br />
+                          Județul Cluj, România
                         </li>
                       </ul>
                     </div>
@@ -140,10 +140,10 @@ const ContactMetaSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Google Maps - Külváros */}
+            {/* Google Maps - Cluj-Napoca */}
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.234567890123!2d19.05123456789012!3d47.47654321098765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc123456789a%3A0x1234567890abcdef!2sBudapest%2C%20Bart%C3%B3k%20B%C3%A9la%20%C3%BAt%2C%201117!5e0!3m2!1sen!2shu!4v1234567890123!5m2!1sen!2shu"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2731.234567890123!2d23.5912345678901!3d46.7701234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e7654321abc%3A0xabcdef1234567890!2sStrada%20Carmen%20Sylva%201-3%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
                 width="100%"
                 height="400"
                 style={{ border: 0, borderRadius: "10px" }}
