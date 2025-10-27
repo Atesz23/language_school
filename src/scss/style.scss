@@ -6320,7 +6320,7 @@
     }
 
     .title {
-      color: var(--white);
+      color: #000;
     }
   }
 
@@ -13259,23 +13259,23 @@
     line-height: 1.08;
 
     @media #{$xxl} {
-      font-size: 150px;
-    }
-
-    @media #{$xl} {
       font-size: 130px;
     }
 
+    @media #{$xl} {
+      font-size: 100px;
+    }
+
     @media #{$md} {
-      font-size: 80px;
+      font-size: 70px;
     }
 
     @media #{$sm} {
-      font-size: 65px;
+      font-size: 55px;
     }
 
     @media #{$xs} {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 
@@ -13287,23 +13287,23 @@
     display: inline-block;
 
     @media #{$xxl} {
-      font-size: 90px;
+      font-size: 60px;
     }
 
     @media #{$xl} {
-      font-size: 80px;
-    }
-
-    @media #{$md} {
       font-size: 50px;
     }
 
-    @media #{$sm} {
+    @media #{$md} {
       font-size: 40px;
     }
 
+    @media #{$sm} {
+      font-size: 30px;
+    }
+
     @media #{$xs} {
-      font-size: 32px;
+      font-size: 25px;
     }
 
     &:before {
@@ -13341,11 +13341,12 @@
       }
 
       a {
-        color: rgba(14, 15, 17, 0.2);
+        color: var(--action);
         text-decoration: none;
 
         &:hover {
           color: var(--action);
+          text-decoration: underline;
         }
       }
     }
