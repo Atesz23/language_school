@@ -46,7 +46,7 @@ const Sidebar = ({
 
             {/* Contact Info */}
             <div className="offset-widget-box">
-              <h2 className="title">Information</h2>
+              <h2 className="title">Informații</h2>
               <div className="contact-meta">
                 <div className="contact-item">
                   <span className="text">
@@ -70,7 +70,7 @@ const Sidebar = ({
 
             {/* Social Links */}
             <div className="offset-widget-box">
-              <h2 className="title">Connect Us On</h2>
+              <h2 className="title">Rețele sociale</h2>
               <div className="social-links">
                 {sidebarData.social.map((social, i) => (
                   <a key={i} href={social.href}>
