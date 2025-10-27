@@ -7,47 +7,48 @@ export interface ITextSlide {
 export interface TextSliderData {
   items: ITextSlide[];
 }
+
 const textSliderData: TextSliderData = {
   items: [
     {
       id: 1,
-      text: `Elevate your brand with design-driven solutions`,
-      suffix: `Empowering brands through intelligent creativity`,
+      text: `Învață limbi străine cu încredere și pasiune`,
+      suffix: `Certificate internaționale recunoscute în 130+ țări`,
     },
     {
       id: 2,
-      text: `Transform brand success with design-powered strategies`,
-      suffix: `Redefining success through innovative design`,
+      text: `Cambridge • IELTS • ÖSD • ECL`,
+      suffix: `Centru autorizat de examene internaționale`,
     },
     {
       id: 3,
-      text: `Design. Impact. Innovation.`,
-      suffix: `Building the next big thing`,
+      text: `De la A1 la C2 - Cursuri pentru toate nivelurile`,
+      suffix: `Profesori experimentați și metode moderne`,
     },
     {
       id: 4,
-      text: `Smarter design through design-infused creativity`,
-      suffix: `Fueling brand success`,
+      text: `Engleză • Germană • Spaniolă • Italiană • Franceză`,
+      suffix: `Online sau prezențial - Tu alegi cum înveți`,
     },
     {
       id: 5,
-      text: `Elevate your brand with design-driven solutions`,
-      suffix: `Empowering brands through intelligent creativity`,
+      text: `Echivalare automată cu Bacalaureatul`,
+      suffix: `Certificate recunoscute de universități internaționale`,
     },
     {
       id: 6,
-      text: `Transform brand success with design-powered strategies`,
-      suffix: `Redefining success through innovative design`,
+      text: `Cluj-Napoca & Târgu Mureș`,
+      suffix: `Două locații pentru confortul tău`,
     },
     {
       id: 7,
-      text: `Design. Impact. Innovation.`,
-      suffix: `Building the next big thing`,
+      text: `Învață. Certifică-te. Reușește.`,
+      suffix: `Parteneri cu European Examinations Centre`,
     },
     {
       id: 8,
-      text: `Smarter design through design-infused creativity`,
-      suffix: `Fueling brand success`,
+      text: `Japoneză • Română • Maghiară`,
+      suffix: `Descoperă lumea prin limbile străine`,
     },
   ],
 };

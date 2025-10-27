@@ -36,12 +36,12 @@ const ServiceSection: React.FC<ServiceProps> = ({ data: examData }) => {
           <div className="section-header">
             <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
               <div className="subtitle-wrapper">
-                <span className="section-subtitle">
+                <span className="section-subtitle" style={{color:"#000"}}>
                   {examData?.subtitle}
                 </span>
               </div>
               <div className="title-wrapper">
-                <h2 className="section-title">{examData?.title}</h2>
+                <h2 className="section-title" style={{color:"#000"}}>{examData?.title}</h2>
               </div>
             </div>
             <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
