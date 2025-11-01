@@ -87,7 +87,7 @@ const HeaderSection:React.FC<HeaderProps> = ({data:headerData}) => {
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                   <Link className="t-btn t-btn-primary" href="/contact">
-                    Let’s Connect
+                    Contactează-ne
                   </Link>
                   <Link className="t-btn t-btn-circle" href="/contact">
                     <i className="fa-solid fa-arrow-right"></i>

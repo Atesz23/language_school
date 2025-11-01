@@ -20,7 +20,7 @@ const FooterOne = () => {
                   <div className="title-wrapper fade-anim">
                     <h2 className="section-title">
                       Sounds like a fit? <br />
-                      Let’s connect!
+                      Contactează-ne!
                     </h2>
                   </div>
                 </div>

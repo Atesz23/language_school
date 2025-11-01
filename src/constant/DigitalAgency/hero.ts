@@ -23,7 +23,7 @@ const heroData:HeroData = {
   description:
     "Averto, a digital agency crafted by a dedicated team of creatives champions the essence of simplicity and elegance.",
   button: {
-    text: "Let’s Connect",
+    text: "Contactează-ne",
     url: "/contact",
   },
   videoUrl:"/videos/Man_Looking.mp4",

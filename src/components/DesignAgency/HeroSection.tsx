@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
-import { HeroData, SocialLink } from "@/constant/DesignAgency/hero";
+import { HeroData, SocialLink, LocationInfo } from "@/constant/DesignAgency/hero";
 
 interface HeroProps {
   data: HeroData;
@@ -24,10 +24,9 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
             >
               {heroData?.socials?.map((item: SocialLink, i: number) => (
                 <Link key={i} href={item?.link}>
-                        <i className={`fa-brands ${item?.icon}`}></i>
-                      </Link>
+                  <i className={`fa-brands ${item?.icon}`}></i>
+                </Link>
               ))}
-                
             </div>
 
             <div className="section-title-wrapper">
@@ -67,8 +66,6 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
           </div>
         </div>
 
-        
-
         <div className="section-content-wrapper">
           <div className="container large">
             <div className="section-content section-spacing-bottom">
@@ -99,9 +96,29 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
 
               <div className="hero-content">
                 <div className="text-wrapper">
-                  <p className="text fade-anim" data-delay="0.90" suppressHydrationWarning={true}>
+                  <p className="text fade-anim mt-4" data-delay="0.90" suppressHydrationWarning={true}>
                     {heroData?.description}
                   </p>
+                  
+                  <div className="locations-section fade-anim" data-delay="1.0" suppressHydrationWarning={true}>
+                    <div className="locations-grid">
+                      {heroData?.locations?.map((location: LocationInfo, i: number) => (
+                        <div key={i} className="location-box">
+                          <h3 className="location-title">{location.city}</h3>
+                          <div className="location-info">
+                            <a href={`tel:${location.phone}`} className="location-link">
+                              <i className="fa-solid fa-phone"></i>
+                              <span>{location.phone}</span>
+                            </a>
+                            <a href={`mailto:${location.email}`} className="location-link">
+                              <i className="fa-solid fa-envelope"></i>
+                              <span>{location.email}</span>
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 

@@ -29,13 +29,13 @@ const contactData: IContact = {
   contactInfo: [
     {
       icon: "/assets/imgs/icon/icon-17.webp",
-      label: "info@languagecenter.ro",
-      link: "mailto:info@languagecenter.ro",
+      label: "office@languagecenter.ro",
+      link: "mailto:office@languagecenter.ro",
     },
     {
       icon: "/assets/imgs/icon/icon-18.webp",
-      label: "+40 721 234 567",
-      link: "tel:+40721234567",
+      label: "+40 769 049 473",
+      link: "tel:+0769049473",
     },
   ],
   socialLinks: [

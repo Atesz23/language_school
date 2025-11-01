@@ -93,7 +93,7 @@ const headerData: HeaderData = {
   ],
   cta: {
     href: "/creative-agency/contact",
-    label: "Let’s Connect",
+    label: "Contactează-ne",
   },
 };
 

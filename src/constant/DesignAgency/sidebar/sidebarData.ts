@@ -57,7 +57,7 @@ const sidebar: SidebarData = {
   description:
     "We offer comprehensive range of services to help your business thrive.",
   cta: {
-    text: "Let’s Connect",
+    text: "Contactează-ne",
     href: "/design-agency/contact",
   },
   ctaIcon: "fa-solid fa-arrow-right",
@@ -69,7 +69,7 @@ const sidebar: SidebarData = {
   ],
   contact: {
     phone: { text: "+40 769 049 473", href: "tel:+40769049473" },
-    email: { text: "info@languagecenter.ro", href: "info@languagecenter.ro" },
+    email: { text: "office@languagecenter.ro", href: "office@languagecenter.ro" },
     address: "Târgu Mureș,str. Dr. Knöpfler Vilmos nr. 2-4,",
   },
   social: [

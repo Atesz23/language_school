@@ -96,11 +96,11 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    "contact:email": "info@languagecenter.ro",
+    "contact:email": "office@languagecenter.ro",
     "contact:phone_cluj": "0775 249 850",
     "contact:phone_mures": "0769 049 473",
-    "contact:address_cluj": "Strada Carmen Silva 1-3, Cluj-Napoca, România",
-    "contact:address_mures": "Str. Dr. Knöpfler Vilmos nr. 2-4, Târgu Mureș, România",
+    "contact:address_cluj": "str. Carmen Silva 1-3, Cluj-Napoca, România",
+    "contact:address_mures": "str. Dr. Knöpfler Vilmos nr. 2-4, Târgu Mureș, România",
     section: "Language School Homepage",
   },
 };

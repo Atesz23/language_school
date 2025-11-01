@@ -56,7 +56,7 @@ const footerData: FooterData = {
     icon: "fa-solid fa-arrow-right",
   },
   logo: "/assets/imgs/logo/language_logo.png",
-  description: "De 15 ani transformăm vise lingvistice în realitate. 8 limbi străine, profesori nativi, certificate internaționale - totul pentru succesul tău.",
+  description: "De 17 ani transformăm vise lingvistice în realitate. 8 limbi străine, profesori nativi, certificate internaționale - totul pentru succesul tău.",
    social: [
     { icon: "fa-facebook-f", link: "https://www.facebook.com/profile.php?id=100063656467576" },
     { icon: "fa-instagram", link: "https://www.instagram.com/languageschool_08/" },
@@ -95,7 +95,7 @@ const footerData: FooterData = {
         },
         address: {
           label: "Locații",
-          lines: ["Târgu Mureș, str. Dr. Knöpfler Vilmos nr. 2-4,", "Cluj-Napoca,Strada Carmen Silva 1-3,"],
+          lines: ["Târgu Mureș, str. Dr. Knöpfler Vilmos nr. 2-4,", "Cluj-Napoca, str. Carmen Silva 1-3,"],
         },
       },
     },

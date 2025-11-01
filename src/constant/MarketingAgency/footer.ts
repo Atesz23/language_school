@@ -54,7 +54,7 @@ const footerData: IFooterData = {
   backgroundImage: "/assets/imgs/shape/shape-42.webp",
   cta: {
     subtitle: "GET IN TOUCH",
-    title: "LET’S CONNECT",
+    title: "CONTACTEAZĂ-NE",
     url: "/marketing-agency/contact",
     buttonText: "Contact Us",
   },

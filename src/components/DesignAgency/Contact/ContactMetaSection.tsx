@@ -20,10 +20,10 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="mailto:officemures@languagecenter.ro">officemures@languagecenter.ro</Link>
+                          <Link href="mailto:office@languagecenter.ro">office@languagecenter.ro</Link>
                         </li>
                         <li>
-                          <Link href="mailto:info@languagecenter.ro">info@languagecenter.ro</Link>
+                          <Link href="mailto:izabella@languagecenter.ro">izabella @languagecenter.ro</Link>
                         </li>
                       </ul>
                     </div>
@@ -40,7 +40,7 @@ const ContactMetaSection: React.FC = () => {
                         <li>
                           <Link href="tel:+40769049473">0769 049 473</Link>
                         </li>
-                        <li>
+                         <li>
                           <Link href="tel:+40365886320">0365 886 320</Link>
                         </li>
                       </ul>
@@ -57,7 +57,7 @@ const ContactMetaSection: React.FC = () => {
                       <ul>
                         <li>
                           Târgu Mureș,<br />
-                          str. Dr. Knöpfler Vilmos nr. 2-4,<br />
+                          Str. Dr. Knöpfler Vilmos nr. 2-4,<br />
                           Județul Mureș, România
                         </li>
                       </ul>
@@ -69,7 +69,7 @@ const ContactMetaSection: React.FC = () => {
             {/* Google Maps - Târgu Mureș */}
             <div className="map-container mb-5">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.8234567890123!2d24.5634567890123!3d46.5423456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474bb6f7a1234567%3A0x1234567890abcdef!2sStrada%20Doctor%20Kn%C3%B6pfler%20Vilmos%202-4%2C%20T%C3%A2rgu%20Mure%C8%99!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.3748404173743!2d24.56098556471395!3d46.547947688597574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474bb7ca1b18634f%3A0xf6763eb83711cb71!2sLanguage%20Center%20Mures!5e0!3m2!1shu!2sro!4v1762009686243!5m2!1shu!2sro"
                 width="100%"
                 height="400"
                 style={{ border: 0, borderRadius: "10px" }}
@@ -97,7 +97,7 @@ const ContactMetaSection: React.FC = () => {
                           <Link href="mailto:officecluj@languagecenter.ro">officecluj@languagecenter.ro</Link>
                         </li>
                         <li>
-                          <Link href="mailto:info@languagecenter.ro">info@languagecenter.ro</Link>
+                          <Link href="mailto:izabella @languagecenter.ro">izabella @languagecenter.ro</Link>
                         </li>
                       </ul>
                     </div>
@@ -131,7 +131,7 @@ const ContactMetaSection: React.FC = () => {
                       <ul>
                         <li>
                           Cluj-Napoca,<br />
-                          Strada Carmen Silva 1-3,<br />
+                          Str. Carmen Silva 1-3,<br />
                           Județul Cluj, România
                         </li>
                       </ul>
@@ -143,7 +143,7 @@ const ContactMetaSection: React.FC = () => {
             {/* Google Maps - Cluj-Napoca */}
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2731.234567890123!2d23.5912345678901!3d46.7701234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e7654321abc%3A0xabcdef1234567890!2sStrada%20Carmen%20Sylva%201-3%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1838.7069912151296!2d23.5976033738801!3d46.75216702736448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490d720a4da269%3A0x7ab360fd2c52f80!2sLanguage%20Center%20Cluj!5e0!3m2!1shu!2sro!4v1762009948075!5m2!1shu!2sro"
                 width="100%"
                 height="400"
                 style={{ border: 0, borderRadius: "10px" }}

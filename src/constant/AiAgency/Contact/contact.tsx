@@ -22,7 +22,7 @@ export interface IContact {
 }
 
 const contactData: IContact = {
-  subtitle: "Let’s connect",
+  subtitle: "Contactează-ne",
   title: "Let’s work together",
   description:
     "People know what an FAQ is, so make that your page title. Don’t over complicate thing have calling it’s good to know or more info.",

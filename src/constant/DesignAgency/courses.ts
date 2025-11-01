@@ -30,7 +30,7 @@ const coursesData: CoursesData = {
       description: "Învață limba germană cu profesori nativi certificați. De la nivel începător până la avansat.",
       image: "/assets/imgs/languages/de.png",
       link: "/courses",
-      levels: ["A1", "A2", "B1", "B2", "C1"],
+      levels: ["A1", "A2", "B1", "B2", "C1", "C2"],
       features: ["Online", "Prezențial", "Individual", "Grup"]
     },
     {
@@ -66,7 +66,7 @@ const coursesData: CoursesData = {
       description: "Limba franceză predată de profesori experimentați. Pregătire DELF și DALF.",
       image: "/assets/imgs/languages/fr.png",
       link: "/courses",
-      levels: ["A1", "A2", "B1", "B2", "C1", "C2"],
+      levels: ["A1", "A2", "B1", "B2", "C1"],
       features: ["Online", "Prezențial", "Individual", "Grup"]
     },
     {

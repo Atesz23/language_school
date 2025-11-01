@@ -108,7 +108,7 @@ const sidebar: SidebarData = {
   description:
     "We offer comprehensive range of services to help your business thrive.",
   cta: {
-    text: "Let’s Connect",
+    text: "Contactează-ne",
     href: "/digital-agency/contact",
   },
   ctaIcon: "fa-solid fa-arrow-right",

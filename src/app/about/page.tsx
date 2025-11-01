@@ -10,6 +10,7 @@ import { ReactElement } from "react";
 import videoData from "@/constant/DesignAgency/About/video";
 import blogData from "@/constant/DesignAgency/blog";
 import textSliderData from "@/constant/DesignAgency/text-slider";
+import WorkSection from "@/components/DesignAgency/About/WorkTwoSection";
 
 export const metadata: Metadata = {
   title: "Despre Noi || Language Center Cluj & Mureș - Centru Autorizat de Examene",
@@ -45,8 +46,10 @@ const AboutPage = (): ReactElement => {
     <>
       <div className="body-design-agency">
         <Breadcrumb title="DESPRE NOI" subTitle="Language Center" pageName="DESPRE LANGUAGE CENTER" />
+         <WorkSection  />
         <AboutSection />
       </div>
+      
       <VideoSection data={videoData} />
       <div className="body-design-agency">
         {/* <BrandSection data={brandData} brandSix={true} /> */}

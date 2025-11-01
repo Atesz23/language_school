@@ -23,7 +23,7 @@ const blogData: IBlog[] = [
   {
     id: 2,
     tag: "LIMBA GERMANĂ",
-    title: "De ce germana deschide uși în cariera ta profesională",
+    title: "De ce deschide germană uși in cariera ta?",
     date: "10 Octombrie, 2025",
     comments: 8,
     image: "/assets/imgs/blog/2.png",
@@ -43,10 +43,10 @@ const blogData: IBlog[] = [
   {
     id: 4,
     tag: "LIMBA ITALIANĂ",
-    title: "Italienește pentru călătorii: fraze esențiale pentru vacanța ta",
+    title: "Italiană pentru călătorii: fraze esențiale pentru vacanța ta",
     date: "1 Octombrie, 2025",
     comments: 6,
-   image: "/assets/imgs/blog/4.png",
+    image: "/assets/imgs/blog/4.png",
     text: `Italia este una dintre cele mai populare destinații turistice din lume. Învață frazele esențiale în italiană care îți vor face călătoria mai plăcută și îți vor permite să te conectezi mai bine cu localnicii și cultura italiană.`,
     url: "/blog",
   },
@@ -86,7 +86,7 @@ const blogData: IBlog[] = [
     title: "Maghiara în viața de zi cu zi: ghid practic pentru începători",
     date: "10 Septembrie, 2025",
     comments: 9,
-   image: "/assets/imgs/blog/8.png",
+    image: "/assets/imgs/blog/8.png",
     text: `În Târgu Mureș și multe alte zone din România, maghiara este o limbă importantă în viața de zi cu zi. Învață expresiile și frazele de bază care îți vor facilita comunicarea și integrarea în comunitatea locală.`,
     url: "/blog",
   },
@@ -117,9 +117,10 @@ const blogData: IBlog[] = [
     date: "25 August, 2025",
     comments: 11,
     image: "/assets/imgs/blog/blog-24.webp",
-    text: `De la Cambridge și TOEFL pentru engleză, până la DELF pentru franceză și Goethe-Zertifikat pentru germană - află care sunt certificările recunoscute internațional și cum te pot ajuta în carieră și educație.`,
+    text: `De la Cambridge pentru engleză, până la ÖSD pentru germană și ECL pentru mai multe limbi europene – află care sunt certificările recunoscute internațional și cum te pot ajuta în carieră și educație.`,
     url: "/blog",
   },
+
   {
     id: 12,
     tag: "COPII ȘI TINERI",

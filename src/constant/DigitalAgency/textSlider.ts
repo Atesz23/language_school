@@ -14,31 +14,31 @@ const textSliderData:TextSliderData = {
   slides: [
     {
       id: 1,
-      text: "LET’S CONNECT",
+      text: "CONTACTEAZĂ-NE",
       href: "/digital-agency/contact",
       img: "/assets/imgs/shape/shape-10.webp",
     },
     {
       id: 2,
-      text: "LET’S CONNECT",
+      text: "CONTACTEAZĂ-NE",
       href: "/digital-agency/contact",
       img: "/assets/imgs/shape/shape-10.webp",
     },
     {
       id: 3,
-      text: "LET’S CONNECT",
+      text: "CONTACTEAZĂ-NE",
       href: "/digital-agency/contact",
       img: "/assets/imgs/shape/shape-10.webp",
     },
     {
       id: 4,
-      text: "LET’S CONNECT",
+      text: "CONTACTEAZĂ-NE",
       href: "/digital-agency/contact",
       img: "/assets/imgs/shape/shape-10.webp",
     },
     {
       id: 5,
-      text: "LET’S CONNECT",
+      text: "CONTACTEAZĂ-NE",
       href: "/digital-agency/contact",
       img: "/assets/imgs/shape/shape-10.webp",
     },

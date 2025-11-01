@@ -96,7 +96,7 @@ const headerData: HeaderData = {
   ],
   cta: {
     href: "/marketing-agency/contact",
-    label: "Let’s Connect",
+    label: "Contactează-ne",
   },
 };
 const Header = () => {

@@ -81,8 +81,8 @@ const ServiceSection: React.FC<ServiceProps> = ({ data: examData }) => {
                     <div className="shape-1">
                       <img src={exam?.shapeImage} alt="shape" />
                     </div>
-                    <div className="thumb">
-                      <img src={exam?.thumb} alt={exam?.title} />
+                    <div className="thumb h-auto">
+                      <img src={exam?.thumb} alt={exam?.title} style={{objectFit:"contain"}}/>
                     </div>
                     <div className="content">
                       {/* Exam specific info */}

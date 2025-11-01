@@ -39,13 +39,13 @@ export const recentBlogs: IRecentBlog[] = [
     url:"/blog",
   },
   {
-   title: "De ce germana deschide uși în cariera ta profesională",
+   title: "De ce deschide germană uși in cariera ta?",
     date: "February 12, 2025",
    image: "/assets/imgs/blog/2.png",
     url: "/blog",
   },
   {
-     title: "Span iola - a treia limbă cea mai vorbită din lume",
+     title: "Spaniola a treia cea mai vorbită limba din lume",
     date: "February 12, 2025",
     image: "/assets/imgs/blog/3.png",
     url: "/blog",

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "0775 249 850",
     "0769 049 473",
     "officecluj@languagecenter.ro",
-    "officemures@languagecenter.ro",
+    "office@languagecenter.ro",
     "harta Language Center",
     "locație școală de limbi",
   ],
