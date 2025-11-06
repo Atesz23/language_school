@@ -124,7 +124,7 @@ const Home = (): ReactElement => {
       <ProcessSection data={processData} />
       {/* <TeamSection data={teamData} /> */}
 
-      <BlogSection data={blogData} />
+      <BlogSection />
     </>
   );
 };

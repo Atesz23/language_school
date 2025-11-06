@@ -18,10 +18,10 @@ const infoData: InfoData = {
   shapeImage1: "/assets/imgs/shape/shape-15.webp",
   shapeImage2: "/assets/imgs/shape/shape-53.webp",
   subtitle: "LIMBA GERMANĂ",
-  title: "Centru Autorizat ÖSD pentru Limba Germană",
-  description:
-    "Centru autorizat pentru pregătirea examenelor ÖSD și TestDaF. Oferim cursuri de limba germană de la nivel A1 până la C2, cu profesori nativi și materiale didactice exclusive create de echipa noastră.",
-  contactLink: "/courses",
+  title: "Centru Autorizat ÖSD și ECL pentru Limba Germană",
+description:
+  "Centru autorizat pentru pregătirea examenelor ÖSD, ECL și TestDaF. Oferim cursuri de limba germană de la nivel A1 până la C2, cu profesori nativi și materiale didactice exclusive create de echipa noastră.",
+   contactLink: "/courses",
   stats: [
     { number: 1000, suffix: "+", label: "Persoane formate la cursurile de germană" },
     { number: 50, suffix: "+", label: "Companii cărora le-am livrat cursuri" },

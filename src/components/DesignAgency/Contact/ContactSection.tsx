@@ -11,9 +11,8 @@ interface FormData {
   Limba: string;
   Metoda: string;
   Nivel: string;
-  Data: string;
-  Ora: string;
   Mesaj: string;
+  AcceptTermeni: boolean;
 }
 
 interface ContactProps {
@@ -37,46 +36,79 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
     Limba: "",
     Metoda: "",
     Nivel: "",
-    Data: "",
-    Ora: "",
     Mesaj: "",
+    AcceptTermeni: false,
   });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData((prev) => ({ ...prev, [name]: checked }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { Nume, Telefon, Email, Limba, Metoda, Nivel, Data, Ora, Mesaj } = formData;
+    const { Nume, Telefon, Email, Limba, Metoda, Nivel, Mesaj, AcceptTermeni } = formData;
     
-    if (!Nume.trim() || !Telefon.trim() || !Email.trim() || !Limba || !Metoda || !Nivel || !Data || !Ora || !Mesaj.trim()) {
+    if (!Nume.trim() || !Telefon.trim() || !Email.trim() || !Limba || !Metoda || !Nivel || !Mesaj.trim()) {
       toast.error("Vă rugăm să completați toate câmpurile înainte de a trimite.");
       return;
     }
 
-    console.log(formData);
+    if (!AcceptTermeni) {
+      toast.error("Trebuie să acceptați termenii și condițiile pentru a trimite formularul.");
+      return;
+    }
+
     const toastId = toast.loading("Se trimite mesajul dvs...");
+    
     try {
-      await new Promise((r) => setTimeout(r, 900));
-      toast.success("Mesajul dvs. a fost trimis cu succes!", {
-        id: toastId,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: Nume,
+          email: Email,
+          phone: Telefon,
+          language: Limba,
+          method: Metoda,
+          current_level: Nivel,
+          message: Mesaj,
+        }),
       });
-      setFormData({
-        Nume: "",
-        Telefon: "",
-        Email: "",
-        Limba: "",
-        Metoda: "",
-        Nivel: "",
-        Data: "",
-        Ora: "",
-        Mesaj: "",
-      });
-    } catch {
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Mesajul dvs. a fost trimis cu succes!", {
+          id: toastId,
+        });
+        setFormData({
+          Nume: "",
+          Telefon: "",
+          Email: "",
+          Limba: "",
+          Metoda: "",
+          Nivel: "",
+          Mesaj: "",
+          AcceptTermeni: false,
+        });
+      } else {
+        toast.error(result.message || "Ceva nu a mers bine. Vă rugăm să încercați din nou.", { 
+          id: toastId 
+        });
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
       toast.error("Ceva nu a mers bine. Vă rugăm să încercați din nou.", { id: toastId });
     }
   };
@@ -215,30 +247,6 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           <option value="C1">C1 - Avansat</option>
                         </select>
                       </div>
-
-                      {/* Data */}
-                      <div className="modern-form-field">
-                        <label htmlFor="Data">Selectează Data</label>
-                        <input
-                          type="date"
-                          name="Data"
-                          id="Data"
-                          value={formData.Data}
-                          onChange={handleChange}
-                        />
-                      </div>
-
-                      {/* Ora */}
-                      <div className="modern-form-field">
-                        <label htmlFor="Ora">Selectează Ora</label>
-                        <input
-                          type="time"
-                          name="Ora"
-                          id="Ora"
-                          value={formData.Ora}
-                          onChange={handleChange}
-                        />
-                      </div>
                     </div>
 
                     {/* Mesaj - teljes szélességben */}
@@ -252,6 +260,23 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                         onChange={handleChange}
                         rows={5}
                       />
+                    </div>
+
+                    {/* GDPR Checkbox */}
+                    <div className="modern-form-field mt-3">
+                      <div className="gdpr-checkbox-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                        <input
+                          type="checkbox"
+                          name="AcceptTermeni"
+                          id="AcceptTermeni"
+                          checked={formData.AcceptTermeni}
+                          onChange={handleChange}
+                          style={{ marginTop: '4px', maxWidth: '16px', cursor: 'pointer' }}
+                        />
+                        <label htmlFor="AcceptTermeni" style={{ cursor: 'pointer', fontSize: '14px', lineHeight: '1.5' }}>
+                          Sunt de acord cu <Link href="/termeni-si-conditii" target="_blank" style={{ textDecoration: 'underline' }}>termenii și condițiile</Link>.
+                        </label>
+                      </div>
                     </div>
 
                     <div className="btn-wrapper w-100 d-flex align-items-center">

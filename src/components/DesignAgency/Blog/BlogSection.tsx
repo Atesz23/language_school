@@ -1,16 +1,33 @@
 "use client";
-import { IBlog } from "@/constant/DesignAgency/blog/blogData";
 import BlogSidebar from "./BlogSidebar";
 import Link from "next/link";
 import { useState } from "react";
 
+// Blog típus az API-ból
+interface Blog {
+  id: number;
+  title: string;
+  slug: string;
+  short_description: string;
+  featured_image: string;
+  created_date: string; // "15 Octombrie, 2025"
+  created_date_raw: string;
+  views: number;
+  published: boolean;
+}
+
 interface BlogSectionProps {
-  data: IBlog[];
+  data: Blog[];
 }
 
 const BlogSection = ({ data: blogData }: BlogSectionProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 4;
+
+  // Top 3 legolvasottabb blog
+  const topViewedBlogs = [...blogData]
+    .sort((a, b) => b.views - a.views)
+    .slice(0, 3);
 
   // Számítsd ki az összes oldal számát
   const totalPages = Math.ceil(blogData.length / blogsPerPage);
@@ -23,7 +40,6 @@ const BlogSection = ({ data: blogData }: BlogSectionProps) => {
   // Oldalváltás kezelése
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    // Görgetés az oldal tetejére
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -51,24 +67,19 @@ const BlogSection = ({ data: blogData }: BlogSectionProps) => {
     const maxVisible = 5;
 
     if (totalPages <= maxVisible) {
-      // Ha kevesebb vagy egyenlő mint 5 oldal, mindegyiket mutasd
       for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i);
       }
     } else {
-      // Ha több mint 5 oldal, smart pagination
       if (currentPage <= 3) {
-        // Első 3 oldal
         for (let i = 1; i <= 5; i++) {
           pageNumbers.push(i);
         }
       } else if (currentPage >= totalPages - 2) {
-        // Utolsó 3 oldal
         for (let i = totalPages - 4; i <= totalPages; i++) {
           pageNumbers.push(i);
         }
       } else {
-        // Középső oldalak
         for (let i = currentPage - 2; i <= currentPage + 2; i++) {
           pageNumbers.push(i);
         }
@@ -87,26 +98,28 @@ const BlogSection = ({ data: blogData }: BlogSectionProps) => {
               <div className="blogs-wrapper-box fade-anim">
                 <div className="blogs-wrapper-main">
                   {currentBlogs.map((post) => (
-                    <article className="blog fade-anim" key={post?.id}>
+                    <article className="blog fade-anim" key={post.id}>
                       <div className="thumb">
-                        <span className="tag">{post?.tag}</span>
-                        <Link href={post?.url}>
-                          <img src={post?.image} alt="blog" />
+                        <Link href={`/blog/${post.slug}`}>
+                          <img 
+                            src={'https://admin.languagecenter.ro/uploads/blog/'+post.featured_image} 
+                            alt={post.title} 
+                          />
                         </Link>
                       </div>
                       <div className="content-wrapper">
                         <div className="content">
                           <div className="meta">
-                            <span className="date">{post?.date}</span>
-                            <span className="comments">
-                              {post?.comments} Comentarii
+                            <span className="date">{post.created_date}</span>
+                            <span className="views">
+                              <i className="fa-regular fa-eye"></i> {post.views} vizualizări
                             </span>
                           </div>
                           <h2 className="title">
-                            <Link href={post?.url}>{post?.title}</Link>
+                            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                           </h2>
-                          <div className="text">{post?.text}</div>
-                          <Link className="t-btn t-btn-primary" href={post?.url}>
+                          <div className="text">{post.short_description}</div>
+                          <Link className="t-btn t-btn-primary" href={`/blog/${post.slug}`}>
                             Citește mai mult
                           </Link>
                         </div>
@@ -155,7 +168,8 @@ const BlogSection = ({ data: blogData }: BlogSectionProps) => {
               )}
             </div>
 
-            <BlogSidebar />
+            {/* BlogSidebar-nak átadjuk a top 3 legolvasottabb blogot */}
+            <BlogSidebar recentBlogs={topViewedBlogs} />
           </div>
         </div>
       </div>

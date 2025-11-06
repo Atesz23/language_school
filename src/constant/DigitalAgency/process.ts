@@ -17,7 +17,7 @@ export interface ProcessData {
 const processData:ProcessData = {
     sectionSubtitle: "Our Strategy",
     sectionTitle: "Our work process",
-    ctaText: "Contact Us",
+    ctaText: "Contactează-ne",
     ctaLink: "/digital-agency/contact",
     steps: [
       {

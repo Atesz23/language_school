@@ -3,6 +3,7 @@
 import { BrandData } from "@/constant/DesignAgency/brand";
 import React from "react";
 import BrandSectionFlag from "../CreativeAgency/BrandSection";
+import Link from "next/link";
 
 interface BrandSectionProps {
   type?: string;
@@ -34,8 +35,9 @@ const BrandSection: React.FC<BrandSectionProps> = ({
           <div className="brands-grid-wrapper fade-anim" suppressHydrationWarning={true}>
             <div className="brands-grid">
               {displayBrands.map((brand, index) => (
+                <Link key={index}  href="/exam">
                 <div 
-                  key={index} 
+                  
                   className="brand-grid-item"
                   data-delay={`0.${(index + 1) * 15}`}
                 >
@@ -43,6 +45,7 @@ const BrandSection: React.FC<BrandSectionProps> = ({
                     <img src={brand?.image} alt={`brand-${index}`} />
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
           </div>

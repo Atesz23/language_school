@@ -148,13 +148,13 @@ const GallerySection: React.FC = () => {
                   </div>
                   <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
                     <div className="t-btn-group">
-                      <Link className="t-btn t-btn-circle" href="/galerie">
+                      <Link className="t-btn t-btn-circle" href="/contact">
                         <i className="fa-solid fa-arrow-right"></i>
                       </Link>
-                      <Link className="t-btn t-btn-primary" href="/galerie">
-                        Vezi Toate Imaginile
+                      <Link className="t-btn t-btn-primary" href="/contact">       
+Contactează-ne
                       </Link>
-                      <Link className="t-btn t-btn-circle" href="/galerie">
+                      <Link className="t-btn t-btn-circle" href="/contact">
                         <i className="fa-solid fa-arrow-right"></i>
                       </Link>
                     </div>

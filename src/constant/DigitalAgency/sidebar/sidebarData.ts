@@ -101,7 +101,7 @@ const sidebar: SidebarData = {
         },
       ],
     },
-    { label: "Contact Us", href: "/digital-agency/contact" },
+    { label: "Contactează-ne", href: "/digital-agency/contact" },
   ],
   closeIcon: "fas fa-times",
   title: "Hello There!",

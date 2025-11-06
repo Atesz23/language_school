@@ -28,7 +28,7 @@ const heroData: HeroData = {
     subtitle: "Focusing on how Averto AI is pushing boundaries in design and innovation",
     primaryBtnText: "Get Started",
     primaryBtnLink: "/ai-agency/contact",
-    secondaryBtnText: "Contact Us",
+    secondaryBtnText: "Contactează-ne",
     secondaryBtnLink: "/ai-agency/contact",
     brandTitle: "300+ Trusted Clients Over Worldwide",
     brands: [

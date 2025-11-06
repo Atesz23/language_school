@@ -66,7 +66,7 @@ const contactData: IContact = {
       type: "text",
     },
   ],
-  buttonText: "Contact Us",
+  buttonText: "Contactează-ne",
 };
 
 export default contactData;

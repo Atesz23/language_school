@@ -49,7 +49,7 @@ const InfoSection: React.FC<InfoProps> = ({ data:infoData, type }) => {
                   className="t-btn t-btn-primary"
                   href={infoData?.contactLink || "#"}
                 >
-                  Contact Us
+                  Contactează-ne
                 </Link>
                 <Link
                   className="t-btn t-btn-circle"

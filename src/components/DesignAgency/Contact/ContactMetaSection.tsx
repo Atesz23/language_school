@@ -22,9 +22,7 @@ const ContactMetaSection: React.FC = () => {
                         <li>
                           <Link href="mailto:office@languagecenter.ro">office@languagecenter.ro</Link>
                         </li>
-                        <li>
-                          <Link href="mailto:izabella@languagecenter.ro">izabella @languagecenter.ro</Link>
-                        </li>
+                       
                       </ul>
                     </div>
                   </div>
@@ -96,9 +94,7 @@ const ContactMetaSection: React.FC = () => {
                         <li>
                           <Link href="mailto:officecluj@languagecenter.ro">officecluj@languagecenter.ro</Link>
                         </li>
-                        <li>
-                          <Link href="mailto:izabella @languagecenter.ro">izabella @languagecenter.ro</Link>
-                        </li>
+                        
                       </ul>
                     </div>
                   </div>

@@ -56,7 +56,7 @@ const footerData: IFooterData = {
     subtitle: "GET IN TOUCH",
     title: "CONTACTEAZĂ-NE",
     url: "/marketing-agency/contact",
-    buttonText: "Contact Us",
+    buttonText: "Contactează-ne",
   },
   logo: {
     src: "/assets/imgs/logo/logo-2-light.png",
@@ -83,11 +83,11 @@ const footerData: IFooterData = {
       { label: "Blog grid", url: "#" },
       { label: "Blog standard", url: "#" },
       { label: "Blog details", url: "/marketing-agency/blog-details" },
-      { label: "Contact us", url: "/marketing-agency/contact" },
+      { label: "Contactează-ne", url: "/marketing-agency/contact" },
     ],
   },
   contact: {
-    title: "Contact Us",
+    title: "Contactează-ne",
     phone: "888 054 7860",
     address: "410 Sandtown,\nCalifornia 56044, USA",
   },

@@ -65,7 +65,7 @@ const header:HeaderData = {
             { label: "Portfolio Details", href: "/creative-agency/portfolio-details" },
       ],
     },
-    { label: "Contact Us", href: "/creative-agency/contact" },
+    { label: "Contactează-ne", href: "/creative-agency/contact" },
   ],
   offcanvasIcon: "/assets/imgs/icon/icon-4.webp",
 };

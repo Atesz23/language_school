@@ -102,10 +102,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <AnimationProvider>
           <div className="body-wrapper body-design-agency">
             <HeaderSection data={headerData} />
-            <SmoothScroll>
-              <main>{children}</main>
-              <FooterSection data={footerData} />
-            </SmoothScroll>
+            {/* <SmoothScroll>
+             
+            </SmoothScroll> */}
+            <main>{children}</main>
+            <FooterSection data={footerData} />
             <EnrollmentModal />
             {/* <ModalDebugButton /> */}
           </div>

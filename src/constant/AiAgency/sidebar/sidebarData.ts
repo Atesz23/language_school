@@ -93,7 +93,7 @@ const sidebar: SidebarData = {
         { label: "Portfolio Details", href: "/ai-agency/portfolio-details" },
       ],
     },
-    { label: "Contact Us", href: "/ai-agency/contact" },
+    { label: "Contactează-ne", href: "/ai-agency/contact" },
   ],
   closeIcon: "fas fa-times",
   title: "Hello There!",

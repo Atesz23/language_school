@@ -27,7 +27,7 @@ const locationData: LocationData = {
     {
       id: 1,
       city: "Language Center Târgu Mureș",
-      emails: ["office@languagecenter.ro", "izabella@languagecenter.ro"],
+      emails: ["office@languagecenter.ro"],
       phones: ["0769 049 473", "0365 886 320"],
       address:
         "Târgu Mureș, Str. Dr. Knöpfler Vilmos nr. 2-4, Județul Mureș, România",

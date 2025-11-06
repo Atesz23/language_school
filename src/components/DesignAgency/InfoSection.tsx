@@ -51,7 +51,7 @@ const InfoSection: React.FC<InfoProps> = ({ data:infoData, type }) => {
                   href={infoData?.contactLink || "#"}
                   suppressHydrationWarning={true}
                 >
-                  Contact Us
+                  Contactează-ne
                 </Link>
                 <Link
                   className="t-btn t-btn-circle"

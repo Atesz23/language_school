@@ -3,7 +3,7 @@ export default function Loading() {
     <div className="loading-container">
       <div className="loading-spinner">
         <div className="spinner"></div>
-        <p>Loading...</p>
+       
       </div>
     </div>
   );

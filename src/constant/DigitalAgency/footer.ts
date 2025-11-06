@@ -36,7 +36,7 @@ const footerData: FooterData = {
     { name: "Our Blogs", href: "#" },
     { name: "Our Works", href: "#" },
     { name: "Careers", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contactează-ne", href: "#" },
   ],
   solutionsLinks: [
     { name: "Our Services", href: "#" },

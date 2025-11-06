@@ -16,6 +16,11 @@ const Sidebar = ({
   handleSidebar,
   menuClass = "d-xl-none",
 }: SideBarProps) => {
+  // Wrapper funkció a linkekhez, ami bezárja a menüt
+  const handleLinkClick = () => {
+    handleSidebar();
+  };
+
   return (
     <>
       <aside className="fix">
@@ -24,7 +29,7 @@ const Sidebar = ({
             {/* Header */}
             <div className="offset-widget offset-header">
               <div className="offset-logo">
-                <Link href="/design-agency">
+                <Link href="/" onClick={handleLinkClick}>
                   <img src={sidebarData.logo} alt="site logo" style={{width:"150px",maxWidth:"unset"}}/>
                 </Link>
               </div>
@@ -37,12 +42,16 @@ const Sidebar = ({
               </button>
             </div>
 
-            {/* Mobile menu container (if needed for JS menu toggle logic) */}
-            <div className={`mobile-menu fix ${menuClass}`}>
+            {/* Mobile menu container */}
+            <div className={`mobile-menu fix ${menuClass}`} onClick={(e) => {
+              // Ha a kattintás egy linkre történt, zárjuk be a menüt
+              const target = e.target as HTMLElement;
+              if (target.tagName === 'A' || target.closest('a')) {
+                handleSidebar();
+              }
+            }}>
               <NestedAccordion items={sidebarData.menus} />
             </div>
-
-      
 
             {/* Contact Info */}
             <div className="offset-widget-box">
@@ -50,14 +59,14 @@ const Sidebar = ({
               <div className="contact-meta">
                 <div className="contact-item">
                   <span className="text">
-                    <Link href={sidebarData?.contact?.phone?.href}>
+                    <Link href={sidebarData?.contact?.phone?.href} onClick={handleLinkClick}>
                       {sidebarData?.contact?.phone?.text}
                     </Link>
                   </span>
                 </div>
                 <div className="contact-item">
                   <span className="text">
-                    <a href={sidebarData?.contact?.email?.href}>
+                    <a href={sidebarData?.contact?.email?.href} onClick={handleLinkClick}>
                       {sidebarData?.contact?.email?.text}
                     </a>
                   </span>
@@ -73,17 +82,12 @@ const Sidebar = ({
               <h2 className="title">Rețele sociale</h2>
               <div className="social-links">
                 {sidebarData.social.map((social, i) => (
-                  <a key={i} href={social.href}>
+                  <a key={i} href={social.href} onClick={handleLinkClick}>
                     {social.label}
                   </a>
                 ))}
               </div>
             </div>
-
-            {/* Footer Logo */}
-            {/* <div className="offset-logo-footer">
-              <img src={sidebarData.footerLogo} alt="footer logo" />
-            </div> */}
           </div>
         </div>
       </aside>

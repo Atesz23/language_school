@@ -104,7 +104,7 @@ const footerData: FooterData = {
     year: "2025",
     company: "Language Center",
     link: "#",
-    terms: { label: "Termeni și Condiții", href: "/" },
+    terms: { label: "Termeni și Condiții", href: "/terms" },
   },
 };
 
