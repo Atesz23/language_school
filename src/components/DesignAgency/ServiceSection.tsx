@@ -175,6 +175,7 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
     name: "",
     email: "",
     phone: "",
+    location: "",
     acceptTerms: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -183,7 +184,7 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.location) {
       toast.error("Te rugăm completează toate câmpurile!");
       setIsSubmitting(false);
       return;
@@ -214,6 +215,7 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
+          location: formData.location,
         }),
       });
 
@@ -241,8 +243,10 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
+    
     setFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value,
@@ -274,16 +278,6 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
 
           <div className="enrollment-modal__form-section">
             <div className="enrollment-modal__header">
-              {/* <div className="enrollment-modal__logo">
-                <Image
-                  src="/assets/imgs/logo/language_logo_dark.png"
-                  alt="Language School"
-                  width={140}
-                  height={55}
-                  priority
-                />
-              </div> */}
-
               <h2 className="enrollment-modal__title">Înscrie-te acum!</h2>
               <p className="enrollment-modal__description">
                 Completează formularul pentru a primi mai multe informații despre acest curs!
@@ -327,6 +321,30 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
                 />
               </div>
 
+              <div className="form-group">
+                <select
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  style={{
+                    width: '100%',
+                    padding: '12px 15px',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    fontSize: '14px',
+                    backgroundColor: '#fff',
+                    cursor: 'pointer',
+                    transition: 'border-color 0.3s ease'
+                  }}
+                >
+                  <option value="">Ce școală de limbi te interesează?</option>
+                  <option value="Târgu Mureș">Târgu Mureș</option>
+                  <option value="Cluj-Napoca">Cluj-Napoca</option>
+                </select>
+              </div>
+
               <div className="form-group gdpr-checkbox">
                 <label style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', cursor: 'pointer', fontSize: '13px', lineHeight: '1.5' }}>
                   <input
@@ -337,11 +355,11 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                     style={{ marginTop: '4px', maxWidth: '16px', cursor: 'pointer' }}
+                    style={{ marginTop: '4px', maxWidth: '16px', cursor: 'pointer' }}
                   />
                   <label htmlFor="acceptTerms" style={{ cursor: 'pointer', fontSize: '14px', lineHeight: '1.5' }}>
-                          Sunt de acord cu <Link href="/terms" target="_blank" style={{ textDecoration: 'underline' }}>termenii și condițiile</Link>.
-                        </label>
+                    Sunt de acord cu <Link href="/terms" target="_blank" style={{ textDecoration: 'underline' }}>termenii și condițiile</Link>.
+                  </label>
                 </label>
               </div>
 

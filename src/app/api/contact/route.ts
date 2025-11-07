@@ -7,9 +7,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     
     // Validáljuk a mezőket
-    const { name, email, phone, language, method, current_level, message } = body;
+    const { name, email, phone, language, method, current_level, location, message } = body;
     
-    if (!name || !email || !phone || !language || !method || !current_level || !message) {
+    if (!name || !email || !phone || !language || !method || !current_level || !location || !message) {
       return NextResponse.json(
         { success: false, message: "Toate câmpurile sunt obligatorii." },
         { status: 400 }
@@ -38,6 +38,7 @@ export async function POST(request: NextRequest) {
         language,
         method,
         current_level,
+        location,
         message,
       }),
     });

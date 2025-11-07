@@ -11,6 +11,7 @@ interface FormData {
   Limba: string;
   Metoda: string;
   Nivel: string;
+  Locatie: string;
   Mesaj: string;
   AcceptTermeni: boolean;
 }
@@ -36,6 +37,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
     Limba: "",
     Metoda: "",
     Nivel: "",
+    Locatie: "",
     Mesaj: "",
     AcceptTermeni: false,
   });
@@ -55,9 +57,9 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { Nume, Telefon, Email, Limba, Metoda, Nivel, Mesaj, AcceptTermeni } = formData;
+    const { Nume, Telefon, Email, Limba, Metoda, Nivel, Locatie, Mesaj, AcceptTermeni } = formData;
     
-    if (!Nume.trim() || !Telefon.trim() || !Email.trim() || !Limba || !Metoda || !Nivel || !Mesaj.trim()) {
+    if (!Nume.trim() || !Telefon.trim() || !Email.trim() || !Limba || !Metoda || !Nivel || !Locatie || !Mesaj.trim()) {
       toast.error("Vă rugăm să completați toate câmpurile înainte de a trimite.");
       return;
     }
@@ -82,6 +84,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
           language: Limba,
           method: Metoda,
           current_level: Nivel,
+          location: Locatie,
           message: Mesaj,
         }),
       });
@@ -99,6 +102,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
           Limba: "",
           Metoda: "",
           Nivel: "",
+          Locatie: "",
           Mesaj: "",
           AcceptTermeni: false,
         });
@@ -247,6 +251,21 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           <option value="B1">B1 - Intermediar</option>
                           <option value="B2">B2 - Intermediar superior</option>
                           <option value="C1">C1 - Avansat</option>
+                        </select>
+                      </div>
+
+                      {/* Locație */}
+                      <div className="modern-form-field">
+                        <label htmlFor="Locatie">Ce școală de limbi te interesează?</label>
+                        <select
+                          name="Locatie"
+                          id="Locatie"
+                          value={formData.Locatie}
+                          onChange={handleChange}
+                        >
+                          <option value="">Alege locația</option>
+                          <option value="Târgu Mureș">Târgu Mureș</option>
+                          <option value="Cluj-Napoca">Cluj-Napoca</option>
                         </select>
                       </div>
                     </div>

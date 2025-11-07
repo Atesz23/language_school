@@ -117,7 +117,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </SmoothScroll> */}
             <main>{children}</main>
             <FooterSection data={footerData} />
-            <EnrollmentModal />
+            {/* <EnrollmentModal /> */}
             {/* <ModalDebugButton /> */}
           </div>
         </AnimationProvider>
