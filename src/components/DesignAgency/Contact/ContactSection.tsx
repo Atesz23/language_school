@@ -212,6 +212,8 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           <option value="Maghiară">Maghiară</option>
                           <option value="Română">Română</option>
                           <option value="Spaniolă">Spaniolă</option>
+                          <option value="Italiană">Italiană</option>
+                          <option value="Japoneză">Japoneză</option>
                         </select>
                       </div>
 
