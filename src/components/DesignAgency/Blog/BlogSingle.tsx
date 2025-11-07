@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react";
-import BlogSidebar from "./BlogSidebar";
 import Link from "next/link";
+import { useState } from "react";
 
 interface Comment {
   avatar: string;
@@ -298,7 +297,7 @@ const BlogSingle = ({ post, comments }: BlogSingleProps) => {
             </div>
 
             {/* Sidebar */}
-            <BlogSidebar />
+ 
             {/* End Sidebar */}
           </div>
         </div>

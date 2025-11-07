@@ -7,10 +7,9 @@ import type { Metadata } from "next";
 import { ReactElement } from "react";
 
 // component data
-import videoData from "@/constant/DesignAgency/About/video";
-import blogData from "@/constant/DesignAgency/blog";
-import textSliderData from "@/constant/DesignAgency/text-slider";
 import WorkSection from "@/components/DesignAgency/About/WorkTwoSection";
+import videoData from "@/constant/DesignAgency/About/video";
+import textSliderData from "@/constant/DesignAgency/text-slider";
 
 export const metadata: Metadata = {
   title: "Despre Noi || Language Center Cluj & Mureș - Centru Autorizat de Examene",
@@ -55,7 +54,7 @@ const AboutPage = (): ReactElement => {
         {/* <BrandSection data={brandData} brandSix={true} /> */}
         {/* <TeamsSection data={teamData} /> */}
         <TextSliderSection data={textSliderData} />
-        <BlogSection data={blogData} />
+        <BlogSection />
       </div>
     </>
   );

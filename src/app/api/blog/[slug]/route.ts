@@ -13,12 +13,14 @@ function generateSignature(data: string, timestamp: string): string {
   return crypto.createHmac('sha256', API_SECRET).update(payload).digest('hex');
 }
 
+// ✅ Next.js 15: params Promise-ként érkezik
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const slug = params.slug;
+    // ✅ Await-eld a params-ot
+    const { slug } = await context.params;
 
     if (!slug) {
       return NextResponse.json(
@@ -44,7 +46,6 @@ export async function GET(
       'Content-Type': 'application/json',
     };
 
-    // Only add security headers if not in DEV_MODE
     if (!DEV_MODE) {
       headers['X-API-Token'] = API_TOKEN;
       headers['X-Timestamp'] = timestamp;

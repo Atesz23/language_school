@@ -1,6 +1,8 @@
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
 import BlogSidebar from "@/components/DesignAgency/Blog/BlogSidebar";
 import { Metadata } from "next";
+import { getBlogBySlug, getTopViewedBlogs } from "@/lib/blogService";
+
 
 interface Blog {
   id: number;
@@ -15,12 +17,17 @@ interface Blog {
   meta_description: string;
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/${params.slug}`, {
-    cache: "no-store",
-  });
-  const data = await res.json();
-
+// ✅ Next.js 15: params Promise
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}): Promise<Metadata> {
+  // ✅ Await params
+  const { slug } = await params;
+  
+  // ✅ Közvetlenül a PHP API-hoz - működik build időben is!
+  const data = await getBlogBySlug(slug);
   const blog = data?.data?.blog;
 
   if (!blog) {
@@ -36,21 +43,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+// ✅ Next.js 15: params Promise
+export default async function BlogDetailPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  // ✅ Await params
+  const { slug } = await params;
 
-  // 🔹 1. Lekérjük az adott blogot
-  const blogRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/${slug}`, {
-    cache: "no-store",
-  });
-  const blogData = await blogRes.json();
+  // ✅ Közvetlenül a PHP API-hoz - működik build időben is!
+  const [blogData, topData] = await Promise.all([
+    getBlogBySlug(slug),
+    getTopViewedBlogs(),
+  ]);
+
   const blog = blogData?.data?.blog;
-
-  // 🔹 2. Lekérjük a 3 legnézettebb blogot
-  const topRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/get_top_viewed`, {
-    cache: "no-store",
-  });
-  const topData = await topRes.json();
   const topBlogs = topData?.data?.blogs || [];
 
   if (!blog) {
@@ -92,7 +100,6 @@ export default async function BlogDetailPage({ params }: { params: { slug: strin
                 </article>
               </div>
 
-              {/* 🔹 BlogSidebar – top 3 legnézettebb blog */}
               <BlogSidebar recentBlogs={topBlogs} />
             </div>
           </div>
