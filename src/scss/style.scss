@@ -6375,7 +6375,7 @@
     }
 
     @media #{$md} {
-      color: var(--white);
+      color: #000;
     }
 
     @media #{$sm} {
@@ -6383,7 +6383,7 @@
     }
 
     a:hover {
-      color: var(--white);
+      color: #000;
     }
   }
 
