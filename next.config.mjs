@@ -3,7 +3,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/.cluj',
+        source: '/cluj',
         destination: '/',
         permanent: true,
       },

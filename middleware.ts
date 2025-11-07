@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   
   // Ha a path /.cluj, irányítsuk át a főoldalra
-  if (path === '/.cluj') {
+  if (path === '/cluj') {
     return NextResponse.redirect(new URL('/', request.url));
   }
   
