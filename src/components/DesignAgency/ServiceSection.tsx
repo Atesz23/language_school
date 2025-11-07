@@ -340,7 +340,7 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
                      style={{ marginTop: '4px', maxWidth: '16px', cursor: 'pointer' }}
                   />
                   <label htmlFor="acceptTerms" style={{ cursor: 'pointer', fontSize: '14px', lineHeight: '1.5' }}>
-                          Sunt de acord cu <Link href="/termeni-si-conditii" target="_blank" style={{ textDecoration: 'underline' }}>termenii și condițiile</Link>.
+                          Sunt de acord cu <Link href="/terms" target="_blank" style={{ textDecoration: 'underline' }}>termenii și condițiile</Link>.
                         </label>
                 </label>
               </div>
