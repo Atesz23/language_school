@@ -274,7 +274,7 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
 
           <div className="enrollment-modal__form-section">
             <div className="enrollment-modal__header">
-              <div className="enrollment-modal__logo">
+              {/* <div className="enrollment-modal__logo">
                 <Image
                   src="/assets/imgs/logo/language_logo_dark.png"
                   alt="Language School"
@@ -282,7 +282,7 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
                   height={55}
                   priority
                 />
-              </div>
+              </div> */}
 
               <h2 className="enrollment-modal__title">Înscrie-te acum!</h2>
               <p className="enrollment-modal__description">

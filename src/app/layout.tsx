@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 // Font import hozzáadása
 import { Instrument_Sans, Poppins, DM_Sans } from "next/font/google";
 
@@ -95,6 +96,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
       suppressHydrationWarning={true}
       className={`${instrumentSans.variable} ${poppins.variable} ${dmSans.variable}`}
     >
+      <head>
+        {/* CookieScript - betöltés a head-ben */}
+        <Script
+          id="cookiescript"
+          src="https://cdn.cookie-script.com/s/4ebdbf3de0fbb70979d1406c7480c1d4.js"
+          strategy="beforeInteractive"
+          charSet="UTF-8"
+        />
+      </head>
       <body
         suppressHydrationWarning={true}
         className={instrumentSans.className}
