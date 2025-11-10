@@ -70,21 +70,21 @@ const AboutSection: React.FC = () => {
                 <div className="t-btn-group" suppressHydrationWarning={true}>
                   <Link
                     className="t-btn t-btn-circle"
-                    href="/despre-noi"
+                    href="/about"
                     suppressHydrationWarning={true}
                   >
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                   <Link
                     className="t-btn t-btn-primary"
-                    href="/despre-noi"
+                    href="/about"
                     suppressHydrationWarning={true}
                   >
                     Află Mai Multe
                   </Link>
                   <Link
                     className="t-btn t-btn-circle"
-                    href="/despre-noi"
+                    href="/about"
                     suppressHydrationWarning={true}
                   >
                     <i className="fa-solid fa-arrow-right"></i>
