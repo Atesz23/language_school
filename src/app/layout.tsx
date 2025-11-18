@@ -100,6 +100,26 @@ export default function RootLayout({ children }: RootLayoutProps) {
           strategy="beforeInteractive"
           charSet="UTF-8"
         />
+
+        {/* Google Analytics */}
+        <Script
+          id="google-analytics"
+          src="https://www.googletagmanager.com/gtag/js?id=G-N973VLW5SB"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-N973VLW5SB');
+            `
+          }}
+        />
+
         {/* Microsoft Clarity */}
         <Script
           id="clarity"
@@ -111,7 +131,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
               })(window, document, "clarity", "script", "u83qsqwjqb");
-            `,
+            `
           }}
         />
       </head>
@@ -134,6 +154,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {/* <ScrollTopWrapper width={20} height={20} className="progress-wrap" /> */}
         <AccessibilityWidget/>
         <Toaster position="top-center" />
+
+        {/* Microsoft Clarity - betöltés a body végén */}
+       
       </body>
     </html>
   );
