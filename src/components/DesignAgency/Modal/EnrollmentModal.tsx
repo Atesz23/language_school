@@ -181,7 +181,7 @@ const EnrollmentModal = () => {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       alert("✅ Mulțumim! Îți vom trimite informațiile în curând!");
       hideModal();
-    } catch (error) {
+    } catch {
       alert("❌ A apărut o eroare. Te rugăm încearcă din nou.");
     } finally {
       setIsSubmitting(false);

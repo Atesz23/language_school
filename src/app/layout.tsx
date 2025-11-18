@@ -30,17 +30,12 @@ import "@/scss/style.scss";
 // Globals css - UTOLJÁRA importáljuk hogy felülírja a többit
 import "./globals.css";
 import "./accessibility.css";
-import ScrollTopWrapper from "@/components/ScrollTopWrapper";
 import AnimationProvider from "@/providers/AnimationProvider";
 import { Toaster } from "react-hot-toast";
-import SmoothScroll from "@/components/DesignAgency/Animation/SmoothScroll";
 import FooterSection from "@/components/DesignAgency/FooterSection";
 import HeaderSection from "@/components/DesignAgency/HeaderSection";
 import headerData from "@/constant/DesignAgency/header";
 import footerData from "@/constant/DesignAgency/footer";
-import EnrollmentModal, {
-  ModalDebugButton,
-} from "@/components/DesignAgency/Modal/EnrollmentModal";
 import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 // Font konfigurálása

@@ -3,20 +3,6 @@ import BlogSidebar from "@/components/DesignAgency/Blog/BlogSidebar";
 import { Metadata } from "next";
 import { getBlogBySlug, getTopViewedBlogs } from "@/lib/blogService";
 
-
-interface Blog {
-  id: number;
-  title: string;
-  slug: string;
-  short_description: string;
-  long_description: string;
-  featured_image: string;
-  created_date: string;
-  views: number;
-  meta_title: string;
-  meta_description: string;
-}
-
 // ✅ Next.js 15: params Promise
 export async function generateMetadata({ 
   params 

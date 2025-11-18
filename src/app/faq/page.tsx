@@ -1,11 +1,9 @@
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
-import ContactSection from "@/components/DesignAgency/Contact/ContactSection";
 import FaqSection from "@/components/DesignAgency/Faq/FaqSection";
 import { Metadata } from "next";
 import { ReactElement } from "react";
 
 // all data
-import contactData from "@/constant/DesignAgency/Contact/contact";
 import faqData from "@/constant/DesignAgency/faq/faq-data";
 
 export const metadata: Metadata = {

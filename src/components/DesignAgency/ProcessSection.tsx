@@ -7,7 +7,7 @@ interface ProcessProps {
   data: ProcessData;
   type?: string;
 }
-const ProcessSection: React.FC<ProcessProps> = ({type, data: processData }) => {
+const ProcessSection: React.FC<ProcessProps> = ({ data: processData }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
 
   return (

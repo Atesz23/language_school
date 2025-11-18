@@ -52,7 +52,7 @@ export default function AccessibilityWidget() {
     if (saved) {
       try {
         setSettings(JSON.parse(saved));
-      } catch (e) {
+      } catch {
         console.error('Failed to load accessibility settings');
       }
     }
@@ -62,6 +62,7 @@ export default function AccessibilityWidget() {
   useEffect(() => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
     applySettings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings]);
 
   const applySettings = () => {
@@ -139,8 +140,8 @@ export default function AccessibilityWidget() {
       root.classList.add('a11y-no-animations');
       
       // Kill all GSAP animations if available
-      if (typeof window !== 'undefined' && (window as any).gsap) {
-        const gsap = (window as any).gsap;
+      if (typeof window !== 'undefined' && (window as Window & { gsap?: { globalTimeline: { pause: () => void }; killTweensOf: (target: string) => void } }).gsap) {
+        const gsap = (window as Window & { gsap: { globalTimeline: { pause: () => void }; killTweensOf: (target: string) => void } }).gsap;
         try {
           gsap.globalTimeline.pause();
           gsap.killTweensOf('*');
@@ -150,9 +151,10 @@ export default function AccessibilityWidget() {
       }
       
       // Disable ScrollTrigger if available
-      if (typeof window !== 'undefined' && (window as any).ScrollTrigger) {
+      if (typeof window !== 'undefined' && (window as Window & { ScrollTrigger?: { getAll: () => Array<{ disable: () => void }> } }).ScrollTrigger) {
         try {
-          (window as any).ScrollTrigger.getAll().forEach((trigger: any) => {
+          const windowWithScrollTrigger = window as unknown as Window & { ScrollTrigger: { getAll: () => Array<{ disable: () => void }> } };
+          windowWithScrollTrigger.ScrollTrigger.getAll().forEach((trigger) => {
             trigger.disable();
           });
         } catch (e) {
@@ -163,8 +165,8 @@ export default function AccessibilityWidget() {
       root.classList.remove('a11y-no-animations');
       
       // Resume GSAP animations if available
-      if (typeof window !== 'undefined' && (window as any).gsap) {
-        const gsap = (window as any).gsap;
+      if (typeof window !== 'undefined' && (window as Window & { gsap?: { globalTimeline: { paused: () => boolean; play: () => void } } }).gsap) {
+        const gsap = (window as Window & { gsap: { globalTimeline: { paused: () => boolean; play: () => void } } }).gsap;
         try {
           if (gsap.globalTimeline.paused()) {
             gsap.globalTimeline.play();
@@ -175,9 +177,10 @@ export default function AccessibilityWidget() {
       }
       
       // Enable ScrollTrigger if available
-      if (typeof window !== 'undefined' && (window as any).ScrollTrigger) {
+      if (typeof window !== 'undefined' && (window as Window & { ScrollTrigger?: { getAll: () => Array<{ enable: () => void }> } }).ScrollTrigger) {
         try {
-          (window as any).ScrollTrigger.getAll().forEach((trigger: any) => {
+          const windowWithScrollTrigger = window as unknown as Window & { ScrollTrigger: { getAll: () => Array<{ enable: () => void }> } };
+          windowWithScrollTrigger.ScrollTrigger.getAll().forEach((trigger) => {
             trigger.enable();
           });
         } catch (e) {
@@ -285,10 +288,10 @@ export default function AccessibilityWidget() {
                       Contrast
                     </label>
                     <div className="a11y-button-group">
-                      {['default', 'high', 'higher'].map((level) => (
+                      {(['default', 'high', 'higher'] as const).map((level) => (
                         <button
                           key={level}
-                          onClick={() => setSettings({ ...settings, contrast: level as any })}
+                          onClick={() => setSettings({ ...settings, contrast: level })}
                           className={`a11y-option-button ${settings.contrast === level ? 'active' : ''}`}
                         >
                           {level.charAt(0).toUpperCase() + level.slice(1)}
@@ -469,7 +472,7 @@ export default function AccessibilityWidget() {
                     </label>
                     <select
                       value={settings.fontFamily}
-                      onChange={(e) => setSettings({ ...settings, fontFamily: e.target.value as any })}
+                      onChange={(e) => setSettings({ ...settings, fontFamily: e.target.value as AccessibilitySettings['fontFamily'] })}
                       className="a11y-select"
                     >
                       <option value="default">Default</option>

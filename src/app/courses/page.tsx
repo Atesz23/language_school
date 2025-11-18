@@ -1,13 +1,10 @@
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
 
-import ProcessSection from "@/components/DesignAgency/ProcessSection";
-
 import { Metadata } from "next";
 import { ReactElement } from "react";
 
 // all data
 import coursesData from "@/constant/DesignAgency/courses";
-import processData from "@/constant/DesignAgency/process";
 import CoursesSection from "@/components/DesignAgency/CoursesSection";
 import BrandSectionFlag from "@/components/CreativeAgency/BrandSection";
 
