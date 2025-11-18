@@ -38,7 +38,7 @@ const locationData: LocationData = {
       id: 2,
       city: "Language Center Cluj-Napoca",
       emails: ["officecluj@languagecenter.ro", "office@languagecenter.ro"],
-      phones: ["0775 249 850", "0365 886 320"],
+      phones: ["0775 249 850"],
       address: "Cluj-Napoca, Str. Carmen Silva 1-3, Județul Cluj, România",
       image: "/assets/imgs/gallery/6.png",
       link: "#",

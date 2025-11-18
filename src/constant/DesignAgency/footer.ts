@@ -29,6 +29,10 @@ export interface IFooterWidget {
       label: string;
       lines: string[];
     };
+    emails?: {
+      label: string;
+      items: { location: string; email: string; href: string; }[];
+    };
   };
 }
 
@@ -76,7 +80,7 @@ const footerData: FooterData = {
     {
       title: "Informații",
       links: [
-        { label: "Despre noi", href: "/avout" },
+        { label: "Despre noi", href: "/about" },
         { label: "Examene ", href: "/exam" },
         { label: "Blog", href: "/blog" },
         
@@ -92,6 +96,13 @@ const footerData: FooterData = {
           label: "Sună-ne acum",
           text: "+40 769 049 473",
           href: "tel:+40769049473",
+        },
+        emails: {
+          label: "Email-uri",
+          items: [
+            { location: "Târgu Mureș", email: "office@languagecenter.ro", href: "mailto:office@languagecenter.ro" },
+            { location: "Cluj-Napoca", email: "officecluj@languagecenter.ro", href: "mailto:officecluj@languagecenter.ro" },
+          ],
         },
         address: {
           label: "Locații",

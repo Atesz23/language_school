@@ -107,6 +107,19 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                         {widget?.contacts?.phone?.text}
                       </a>
                     </li>
+                    {widget?.contacts?.emails && (
+                      <li>
+                        <span className="nav-title">
+                          {widget?.contacts?.emails?.label}
+                        </span>
+                        {widget?.contacts?.emails?.items?.map((item, i:number) => (
+                          <div key={i} style={{ marginBottom: '8px' }}>
+                            <strong>{item.location}:</strong>{' '}
+                            <a href={item.href}>{item.email}</a>
+                          </div>
+                        ))}
+                      </li>
+                    )}
                     <li>
                       <span className="nav-title">
                         {widget?.contacts?.address?.label}

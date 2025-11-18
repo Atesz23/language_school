@@ -136,14 +136,21 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                   <p className="text">{description}</p>
                 </div>
                 <div className="contact-list">
-                  <ul>
-                    {contactInfo.map((item, index) => (
-                      <li key={index}>
-                        <img src={item?.icon} alt="icon image" />
-                        <Link href={item?.link}>{item?.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {contactInfo.map((locationGroup, groupIndex) => (
+                    <div key={groupIndex} style={{ marginBottom: '24px' }}>
+                      <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '12px', color: '#000' }}>
+                        {locationGroup.location}
+                      </h3>
+                      <ul>
+                        {locationGroup.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <img src={item?.icon} alt="icon image" />
+                            <Link href={item?.link}>{item?.label}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
                 <div className="social-links-wrapper">
                   <p className="title">Urmărește-ne:</p>

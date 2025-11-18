@@ -3,9 +3,12 @@ export interface IContact {
   title: string;
   description: string;
   contactInfo: {
-    icon: string;
-    label: string;
-    link: string;
+    location: string;
+    items: {
+      icon: string;
+      label: string;
+      link: string;
+    }[];
   }[];
   socialLinks: {
     icon: string;
@@ -28,14 +31,34 @@ const contactData: IContact = {
     "Suntem aici să te ajutăm să-ți atingi obiectivele lingvistice! Indiferent dacă vrei să înveți o limbă nouă pentru carieră, călătorii sau dezvoltare personală, echipa noastră de profesori experimentați te va ghida pas cu pas. Completează formularul de mai jos și te vom contacta în cel mai scurt timp pentru a discuta despre nevoile tale.",
   contactInfo: [
     {
-      icon: "/assets/imgs/icon/icon-17.webp",
-      label: "office@languagecenter.ro",
-      link: "mailto:office@languagecenter.ro",
+      location: "Târgu Mureș",
+      items: [
+        {
+          icon: "/assets/imgs/icon/icon-17.webp",
+          label: "office@languagecenter.ro",
+          link: "mailto:office@languagecenter.ro",
+        },
+        {
+          icon: "/assets/imgs/icon/icon-18.webp",
+          label: "+40 769 049 473",
+          link: "tel:+40769049473",
+        },
+      ],
     },
     {
-      icon: "/assets/imgs/icon/icon-18.webp",
-      label: "+40 769 049 473",
-      link: "tel:+0769049473",
+      location: "Cluj-Napoca",
+      items: [
+        {
+          icon: "/assets/imgs/icon/icon-17.webp",
+          label: "officecluj@languagecenter.ro",
+          link: "mailto:officecluj@languagecenter.ro",
+        },
+        {
+          icon: "/assets/imgs/icon/icon-18.webp",
+          label: "+40 775 249 850",
+          link: "tel:+40775249850",
+        },
+      ],
     },
   ],
   socialLinks: [

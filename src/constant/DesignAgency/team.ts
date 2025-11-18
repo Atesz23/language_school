@@ -18,41 +18,11 @@ export interface TeamData {
 }
 
 const teamData: TeamData = {
-  subtitle: "OUR TEAM",
-  title: "Meet our members",
+  subtitle: "ECHIPA NOASTRĂ",
+  title: "Cunoaște echipa noastră",
   teamPageLink: "/design-agency/team",
-  teamPageLinkTitle: "Discover All",
+  teamPageLinkTitle: "Descoperă Toate",
   members: [
-    {
-      name: "Berrymen Wills",
-      role: "CEO and founder",
-      image: "/assets/imgs/team/team-4.webp",
-      socials: {
-        fb: "#",
-        ln: "#",
-        in: "#",
-      },
-    },
-    {
-      name: "Emilly Mayore",
-      role: "UI/UX Designer",
-      image: "/assets/imgs/team/team-5.webp",
-      socials: {
-        fb: "#",
-        ln: "#",
-        in: "#",
-      },
-    },
-    {
-      name: "Nelson Scott",
-      role: "Web Developer",
-      image: "/assets/imgs/team/team-6.webp",
-      socials: {
-        fb: "#",
-        ln: "#",
-        in: "#",
-      },
-    },
     {
       name: "Berrymen Wills",
       role: "CEO and founder",

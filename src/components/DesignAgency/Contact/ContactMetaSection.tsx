@@ -110,9 +110,7 @@ const ContactMetaSection: React.FC = () => {
                         <li>
                           <Link href="tel:+40775249850">0775 249 850</Link>
                         </li>
-                        <li>
-                          <Link href="tel:+40365886320">0365 886 320</Link>
-                        </li>
+                       
                       </ul>
                     </div>
                   </div>

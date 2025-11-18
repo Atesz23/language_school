@@ -29,7 +29,7 @@ import "@/scss/style.scss";
 
 // Globals css - UTOLJÁRA importáljuk hogy felülírja a többit
 import "./globals.css";
-
+import "./accessibility.css";
 import ScrollTopWrapper from "@/components/ScrollTopWrapper";
 import AnimationProvider from "@/providers/AnimationProvider";
 import { Toaster } from "react-hot-toast";
@@ -41,6 +41,7 @@ import footerData from "@/constant/DesignAgency/footer";
 import EnrollmentModal, {
   ModalDebugButton,
 } from "@/components/DesignAgency/Modal/EnrollmentModal";
+import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 // Font konfigurálása
 const instrumentSans = Instrument_Sans({
@@ -135,7 +136,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             {/* <ModalDebugButton /> */}
           </div>
         </AnimationProvider>
-        <ScrollTopWrapper width={20} height={20} className="progress-wrap" />
+        {/* <ScrollTopWrapper width={20} height={20} className="progress-wrap" /> */}
+        <AccessibilityWidget/>
         <Toaster position="top-center" />
       </body>
     </html>

@@ -31,25 +31,19 @@ interface ServiceProps {
 const ServiceSection: React.FC<ServiceProps> = ({ data: examData }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [selectedExamLink, setSelectedExamLink] = useState<string>("");
 
-  const handleExamClick = (e: React.MouseEvent, examLink: string) => {
+  const handleExamClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    setSelectedExamLink(examLink);
     setIsModalOpen(true);
   };
 
   const handleModalClose = () => {
     setIsModalOpen(false);
-    setSelectedExamLink("");
   };
 
   const handleModalSuccess = () => {
     setIsModalOpen(false);
-    // Redirect to the selected exam page after successful form submission
-    if (selectedExamLink && selectedExamLink !== "#") {
-      window.location.href = selectedExamLink;
-    }
+    // Don't redirect - just close the modal
   };
 
   return (
@@ -93,9 +87,9 @@ const ServiceSection: React.FC<ServiceProps> = ({ data: examData }) => {
                     }`}
                     onMouseOver={() => setActiveIndex(index)}
                   >
-                    <a 
-                      href="#" 
-                      onClick={(e) => handleExamClick(e, exam?.link || "#")}
+                    <a
+                      href="#"
+                      onClick={handleExamClick}
                       style={{ cursor: "pointer" }}
                     >
                       <div className="header">
@@ -149,10 +143,9 @@ const ServiceSection: React.FC<ServiceProps> = ({ data: examData }) => {
       </section>
 
       {isModalOpen && (
-        <ExamEnrollmentModal 
+        <ExamEnrollmentModal
           onClose={handleModalClose}
           onSuccess={handleModalSuccess}
-          examLink={selectedExamLink}
         />
       )}
     </>
@@ -163,13 +156,11 @@ const ServiceSection: React.FC<ServiceProps> = ({ data: examData }) => {
 interface ExamEnrollmentModalProps {
   onClose: () => void;
   onSuccess: () => void;
-  examLink: string;
 }
 
-const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({ 
-  onClose, 
-  onSuccess,
-  examLink 
+const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
+  onClose,
+  onSuccess
 }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -222,11 +213,11 @@ const ExamEnrollmentModal: React.FC<ExamEnrollmentModalProps> = ({
       const result = await response.json();
 
       if (result.success) {
-        toast.success("Mulțumim! Te redirecționăm către cursul selectat!", {
+        toast.success("Mulțumim! Formularul a fost trimis cu succes!", {
           id: toastId,
         });
         setTimeout(() => {
-          onSuccess(); // This will redirect to the exam page
+          onSuccess(); // This will close the modal
         }, 1000);
       } else {
         toast.error(result.message || "A apărut o eroare. Te rugăm încearcă din nou.", {

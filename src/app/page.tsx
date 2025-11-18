@@ -5,8 +5,7 @@ import BrandSection from "@/components/DesignAgency/BrandSection";
 import HeroSection from "@/components/DesignAgency/HeroSection";
 import InfoSection from "@/components/DesignAgency/InfoSection";
 import ProcessSection from "@/components/DesignAgency/ProcessSection";
-import ServiceSection from "@/components/DesignAgency/ServiceSection";
-import TeamSection from "@/components/DesignAgency/TeamSection";
+
 import TestimonialSection from "@/components/DesignAgency/TestimonialSection";
 import WorkSection from "@/components/DesignAgency/WorkSection";
 import { Metadata } from "next";
@@ -14,18 +13,14 @@ import { ReactElement } from "react";
 
 // all data
 import VideoSection from "@/components/DesignAgency/About/VideoSection";
-import aboutData from "@/constant/DesignAgency/about";
 import videoData from "@/constant/DesignAgency/About/video";
 import awardData from "@/constant/DesignAgency/awards";
-import blogData from "@/constant/DesignAgency/blog";
 import brandData from "@/constant/DesignAgency/brand";
 import heroData from "@/constant/DesignAgency/hero";
 import infoData from "@/constant/DesignAgency/info";
 import processData from "@/constant/DesignAgency/process";
-import serviceData from "@/constant/DesignAgency/service";
-import teamData from "@/constant/DesignAgency/team";
+
 import testimonialData from "@/constant/DesignAgency/testimonial";
-import workData from "@/constant/DesignAgency/work";
 
 export const metadata: Metadata = {
   title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine și Examene Internaționale",
@@ -122,7 +117,7 @@ const Home = (): ReactElement => {
       <WorkSection  />
       <TestimonialSection data={testimonialData} />
       <ProcessSection data={processData} />
-      {/* <TeamSection data={teamData} /> */}
+
 
       <BlogSection />
     </>

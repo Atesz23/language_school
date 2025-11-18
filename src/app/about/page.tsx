@@ -1,6 +1,7 @@
 import VideoSection from "@/components/DesignAgency/About/VideoSection";
 import AboutSection from "@/components/DesignAgency/AboutSection";
 import BlogSection from "@/components/DesignAgency/BlogSection";
+import FeaturesSection from "@/components/DesignAgency/FeaturesSection";
 import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
 import TextSliderSection from "@/components/DesignAgency/TextSliderSection";
 import type { Metadata } from "next";
@@ -8,11 +9,13 @@ import { ReactElement } from "react";
 
 // component data
 import WorkSection from "@/components/DesignAgency/About/WorkTwoSection";
+import TeamSection from "@/components/DesignAgency/TeamSection";
 import videoData from "@/constant/DesignAgency/About/video";
 import textSliderData from "@/constant/DesignAgency/text-slider";
 
 export const metadata: Metadata = {
-  title: "Despre Noi || Language Center Cluj & Mureș - Centru Autorizat de Examene",
+  title:
+    "Despre Noi || Language Center Cluj & Mureș - Centru Autorizat de Examene",
   description:
     "Fondată în 2008, Language Center este școală dedicată exclusiv educației lingvistice. Centru autorizat pentru Cambridge, IELTS, ÖSD și ECL. Parteneri cu European Examinations Centre București.",
   keywords: [
@@ -44,11 +47,16 @@ const AboutPage = (): ReactElement => {
   return (
     <>
       <div className="body-design-agency">
-        <Breadcrumb title="DESPRE NOI" subTitle="Language Center" pageName="DESPRE LANGUAGE CENTER" />
-         <WorkSection  />
+        <Breadcrumb
+          title="DESPRE NOI"
+          subTitle="Language Center"
+          pageName="DESPRE LANGUAGE CENTER"
+        />
+        <WorkSection />
         <AboutSection />
       </div>
-      
+      <TeamSection />
+      <FeaturesSection />
       <VideoSection data={videoData} />
       <div className="body-design-agency">
         {/* <BrandSection data={brandData} brandSix={true} /> */}

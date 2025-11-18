@@ -20,8 +20,8 @@ const BlogSection: React.FC = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        // Lekérjük az összes blogot
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog?limit=1000`, {
+        // Lekérjük az összes blogot - használjuk a relatív URL-t
+        const res = await fetch(`/api/blog?limit=1000`, {
           cache: "no-store",
         });
         const data = await res.json();
@@ -45,8 +45,6 @@ const BlogSection: React.FC = () => {
 
     fetchBlogs();
   }, []);
-
-  if (loading) return <p>Loading blogs...</p>;
 
   return (
     <section className="blog-area-2">
@@ -91,8 +89,13 @@ const BlogSection: React.FC = () => {
           {/* Blog Posts */}
           <div className="blog-wrapper-box fade-anim" suppressHydrationWarning={true}>
             <div className="container">
-              <div className="blog-wrapper">
-                 {blogs.map((post,index) => (
+              <div className={`blog-wrapper ${loading ? 'loading-state' : ''}`}>
+                {loading ? (
+                  <div className="loading-container-blog">
+                    <div className="spinner"></div>
+                    <p>Se încarcă articolele...</p>
+                  </div>
+                ) : blogs.map((post,index) => (
                   <article
                     className="blog-2 fade-anim"
                     suppressHydrationWarning={true}
@@ -101,7 +104,6 @@ const BlogSection: React.FC = () => {
                     data-direction="right"
                   >
                     <div className="thumb">
-
                       <Link href={`/blog/${post.slug}`}>
                         <img src={`https://admin.languagecenter.ro/uploads/blog/${post.featured_image}`}  alt={post.title} />
                       </Link>
@@ -116,22 +118,91 @@ const BlogSection: React.FC = () => {
                         <Link
                           className="t-btn t-btn-circle"
                           href={`/blog/${post.slug}`}>
-                        
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                       </div>
                     </div>
                   </article>
                 ))}
-               
               </div>
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .blog-wrapper.loading-state {
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .loading-container-blog {
+          text-align: center;
+          padding: 40px;
+        }
+
+        .loading-container-blog .spinner {
+          width: 40px;
+          height: 40px;
+          border: 4px solid #f3f3f3;
+          border-top: 4px solid #e08a1d;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin: 0 auto;
+        }
+
+        .loading-container-blog p {
+          margin-top: 20px;
+          color: #666;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Grid Styles */
+        @media (max-width: 991px) {
+          :global(.blog-wrapper) {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+
+        @media (max-width: 767px) {
+          :global(.blog-wrapper) {
+            grid-template-columns: 1fr !important;
+            gap: 30px 20px !important;
+          }
+
+          :global(.blog-2 .title) {
+            font-size: 20px !important;
+          }
+
+          :global(.blog-2 .thumb) {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          :global(.blog-wrapper) {
+            grid-template-columns: 1fr !important;
+            gap: 25px 15px !important;
+          }
+
+          :global(.blog-2 .title) {
+            font-size: 18px !important;
+          }
+
+          :global(.blog-area-2 .section-header) {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
 
-   
+
   );
 };
 
