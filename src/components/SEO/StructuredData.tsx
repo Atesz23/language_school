@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 interface StructuredDataProps {
   type?: 'organization' | 'educational' | 'localBusiness' | 'course';
-  data?: any;
+  data?: Record<string, unknown>;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', data }) => {
