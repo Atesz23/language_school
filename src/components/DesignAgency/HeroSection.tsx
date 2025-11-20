@@ -23,28 +23,16 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
               data-direction="bottom"
               suppressHydrationWarning={true}
             >
-              {heroData?.socials?.map((item: SocialLink, i: number) => {
-                const socialNames: Record<string, string> = {
-                  'fa-facebook-f': 'Facebook',
-                  'fa-instagram': 'Instagram',
-                  'fa-youtube': 'YouTube',
-                  'fa-tiktok': 'TikTok'
-                };
-                const socialName = socialNames[item?.icon] || 'Social Media';
-                return (
-                  <Link key={i} href={item?.link} aria-label={socialName}>
-                    <i className={`fa-brands ${item?.icon}`}></i>
-                  </Link>
-                );
-              })}
+              {heroData?.socials?.map((item: SocialLink, i: number) => (
+                <Link key={i} href={item?.link}>
+                  <i className={`fa-brands ${item?.icon}`}></i>
+                </Link>
+              ))}
             </div>
 
             <div className="section-title-wrapper">
               <div className="title-wrapper">
-                <h1 className="section-title fade-anim" suppressHydrationWarning={true}>
-                  Cursuri de Limbi Străine Cluj & Mureș - Centru Autorizat pentru Examene Internaționale
-                </h1>
-                <div className="typewriter-text fade-anim" suppressHydrationWarning={true}>
+                <h1 className="section-title typewriter-text fade-anim" suppressHydrationWarning={true}>
                   <Typewriter
                     options={{
                       strings: heroData?.titleChange ?? [],
@@ -55,7 +43,7 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
                       cursorClassName: "d-none",
                     }}
                   />
-                </div>
+                </h1>
               </div>
 
               <div className="subtitle-wrapper subtitle-wrapper--slow">
@@ -117,7 +105,7 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
                     <div className="locations-grid">
                       {heroData?.locations?.map((location: LocationInfo, i: number) => (
                         <div key={i} className="location-box">
-                          <h2 className="location-title">{location.city}</h2>
+                          <h3 className="location-title">{location.city}</h3>
                           <div className="location-info">
                             <a href={`tel:${location.phone}`} className="location-link">
                               <i className="fa-solid fa-phone"></i>
