@@ -7,7 +7,8 @@ export interface SocialLink {
 export interface LocationInfo {
   city: string;
   phone: string;
-  email: string;
+  emailUser: string;
+  emailDomain: string;
 }
 
 export interface HeroData {
@@ -30,12 +31,14 @@ const heroData: HeroData = {
     {
       city: "Cluj-Napoca",
       phone: "+40 775 249 850",
-      email: "officecluj@languagecenter.ro"
+      emailUser: btoa("officecluj"),
+      emailDomain: btoa("languagecenter.ro")
     },
     {
       city: "Târgu Mureș",
       phone: "+40 769 049 473",
-      email: "office@languagecenter.ro"
+      emailUser: btoa("office"),
+      emailDomain: btoa("languagecenter.ro")
     }
   ],
   socials: [

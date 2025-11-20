@@ -25,20 +25,21 @@ const AboutSection: React.FC = () => {
             <div className="section-content fade-anim" suppressHydrationWarning={true}>
               <div className="section-title-wrapper" suppressHydrationWarning={true}>
                 <div className="title-wrapper" suppressHydrationWarning={true}>
-                  <h2 className="section-title" suppressHydrationWarning={true}>
-                    Centru Autorizat de Pregătire pentru Certificate Internaționale
-                  </h2>
+                  <h1 className="section-title" suppressHydrationWarning={true}>
+                    Cursuri de Limbi Străine Cluj & Mureș - Centru Autorizat pentru Examene Internaționale
+                  </h1>
                 </div>
               </div>
-              
+
               <div className="text-wrapper" suppressHydrationWarning={true}>
                 <p className="text" suppressHydrationWarning={true}>
-                  Fondată în 2008 din pasiune pentru limbile străine, Language Center este acum o 
-                  școală dedicată exclusiv educației lingvistice. Prin parteneriatul cu European 
-                  Examinations Centre București, suntem centru autorizat pentru pregătirea 
-                  candidaților în vederea obținerii certificatelor internaționale CAMBRIDGE, IELTS, 
-                  ÖSD și ECL - recunoscute de peste 10.000 de universități și angajatori din 
-                  întreaga lume.
+                  Fondată în 2008, <strong>Language Center</strong> este o școală de limbi străine dedicată
+                  exclusiv educației lingvistice în <strong>Cluj-Napoca</strong> și <strong>Târgu Mureș</strong>.
+                  Oferim cursuri de <strong>limba germană</strong>, <strong>limba engleză</strong>, spaniolă,
+                  franceză, italiană, japoneză și maghiară pentru toate nivelurile. Suntem centru autorizat
+                  pentru examene internaționale <strong>Cambridge</strong>, <strong>IELTS</strong>,
+                  <strong>ÖSD</strong> și <strong>ECL</strong> - certificate recunoscute de peste 10.000
+                  de universități și angajatori din întreaga lume.
                 </p>
               </div>
 

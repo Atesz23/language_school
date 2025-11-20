@@ -23,9 +23,9 @@ import processData from "@/constant/DesignAgency/process";
 import testimonialData from "@/constant/DesignAgency/testimonial";
 
 export const metadata: Metadata = {
-  title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine și Examene Internaționale",
+  title: "Language Center - Cursuri Limbi Străine Cluj & Mureș",
   description:
-    "Language Center oferă cursuri profesionale de limbi străine în Cluj-Napoca și Târgu Mureș. Centru autorizat pentru examene Cambridge, IELTS, ÖSD și ECL. Pregătire pentru Bacalaureat și certificate internaționale recunoscute în 130+ țări.",
+    "Cursuri de limbi străine în Cluj și Mureș. Centru autorizat Cambridge, IELTS, ÖSD, ECL. Pregătire examene internaționale cu profesori nativi.",
   keywords: [
     "cursuri limbi străine Cluj",
     "cursuri limbi străine Târgu Mureș",
@@ -55,10 +55,14 @@ export const metadata: Metadata = {
   ],
   creator: "Language Center Cluj & Mureș",
   authors: [{ name: "Language Center Cluj & Mureș" }],
+  metadataBase: new URL("https://www.languagecenter.ro"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine",
+    title: "Language Center - Cursuri Limbi Străine Cluj & Mureș",
     description:
-      "Învață limbi străine cu profesori experimentați. Centru autorizat pentru examene Cambridge, IELTS, ÖSD și ECL. Cursuri pentru toate nivelurile în Cluj-Napoca și Târgu Mureș.",
+      "Cursuri de limbi străine cu profesori nativi. Centru autorizat Cambridge, IELTS, ÖSD, ECL. Pregătire examene pentru toate nivelurile.",
     url: "https://www.languagecenter.ro",
     siteName: "Language Center Cluj & Mureș",
     locale: "ro_RO",
@@ -74,9 +78,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Language Center Cluj & Mureș - Cursuri de Limbi Străine",
+    title: "Language Center - Cursuri Limbi Străine Cluj & Mureș",
     description:
-      "Învață limbi străine cu profesori experimentați. Centru autorizat pentru examene Cambridge, IELTS, ÖSD și ECL.",
+      "Cursuri de limbi străine cu profesori nativi. Centru autorizat Cambridge, IELTS, ÖSD, ECL. Toate nivelurile.",
     images: ["/assets/imgs/twitter-image.jpg"],
   },
   robots: {
@@ -91,7 +95,6 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    "contact:email": "office@languagecenter.ro",
     "contact:phone_cluj": "0775 249 850",
     "contact:phone_mures": "0769 049 473",
     "contact:address_cluj": "str. Carmen Silva 1-3, Cluj-Napoca, România",

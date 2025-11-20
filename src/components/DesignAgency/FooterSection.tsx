@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import {FooterData, IFooterLink, IFooterSocial} from "@/constant/DesignAgency/footer";
+import ProtectedEmail from "@/components/common/ProtectedEmail";
+
 interface FooterSectionProps {
     data: FooterData;
 }
@@ -115,7 +119,10 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                         {widget?.contacts?.emails?.items?.map((item, i:number) => (
                           <div key={i} style={{ marginBottom: '8px' }}>
                             <strong>{item.location}:</strong>{' '}
-                            <a href={item.href}>{item.email}</a>
+                            <ProtectedEmail
+                              user={item.emailUser}
+                              domain={item.emailDomain}
+                            />
                           </div>
                         ))}
                       </li>

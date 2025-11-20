@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
 import { HeroData, SocialLink, LocationInfo } from "@/constant/DesignAgency/hero";
+import ProtectedEmail from "@/components/common/ProtectedEmail";
 
 interface HeroProps {
   data: HeroData;
@@ -110,10 +111,13 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
                               <i className="fa-solid fa-phone"></i>
                               <span>{location.phone}</span>
                             </a>
-                            <a href={`mailto:${location.email}`} className="location-link">
+                            <div className="location-link">
                               <i className="fa-solid fa-envelope"></i>
-                              <span>{location.email}</span>
-                            </a>
+                              <ProtectedEmail
+                                user={location.emailUser}
+                                domain={location.emailDomain}
+                              />
+                            </div>
                           </div>
                         </div>
                       ))}

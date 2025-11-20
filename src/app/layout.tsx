@@ -39,6 +39,7 @@ import "./accessibility.css";
 import "./globals.css";
 
 import ClarityScript from "@/components/ClarityScript";
+import StructuredData from "@/components/SEO/StructuredData";
 
 // Font konfigurálása
 const instrumentSans = Instrument_Sans({
@@ -128,11 +129,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={instrumentSans.className}
       >
         <ClarityScript />
+        <StructuredData type="organization" />
         <AnimationProvider>
           <div className="body-wrapper body-design-agency">
             <HeaderSection data={headerData} />
             {/* <SmoothScroll>
-             
+
             </SmoothScroll> */}
             <main>{children}</main>
             <FooterSection data={footerData} />
@@ -144,8 +146,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <AccessibilityWidget/>
         <Toaster position="top-center" />
 
-        
-       
+
+
       </body>
     </html>
   );

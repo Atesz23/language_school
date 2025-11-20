@@ -31,7 +31,7 @@ export interface IFooterWidget {
     };
     emails?: {
       label: string;
-      items: { location: string; email: string; href: string; }[];
+      items: { location: string; emailUser: string; emailDomain: string; }[];
     };
   };
 }
@@ -100,8 +100,8 @@ const footerData: FooterData = {
         emails: {
           label: "Email-uri",
           items: [
-            { location: "Târgu Mureș", email: "office@languagecenter.ro", href: "mailto:office@languagecenter.ro" },
-            { location: "Cluj-Napoca", email: "officecluj@languagecenter.ro", href: "mailto:officecluj@languagecenter.ro" },
+            { location: "Târgu Mureș", emailUser: btoa("office"), emailDomain: btoa("languagecenter.ro") },
+            { location: "Cluj-Napoca", emailUser: btoa("officecluj"), emailDomain: btoa("languagecenter.ro") },
           ],
         },
         address: {
