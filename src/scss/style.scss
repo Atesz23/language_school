@@ -5440,6 +5440,12 @@
 
     .number {
       border-color: var(--white);
+      color: var(--black);
+      background-color: var(--white);
+    }
+
+    .title {
+      color: var(--black);
     }
 
     .process-list {
@@ -5447,6 +5453,8 @@
 
       li {
         border-color: var(--white);
+        color: var(--black);
+        background-color: var(--white);
       }
     }
   }

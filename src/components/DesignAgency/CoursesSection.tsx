@@ -105,6 +105,7 @@ const CoursesSection: React.FC<CoursesProps> = ({ all, data: coursesData }) => {
                     <Link
                       className="t-btn t-btn-circle"
                       href={coursesData?.coursesPageLink || "#"}
+                      aria-label="Vezi toate cursurile"
                     >
                       <i className="fa-solid fa-arrow-right"></i>
                     </Link>
@@ -117,6 +118,7 @@ const CoursesSection: React.FC<CoursesProps> = ({ all, data: coursesData }) => {
                     <Link
                       className="t-btn t-btn-circle"
                       href={coursesData?.coursesPageLink || "#"}
+                      aria-label="Vezi toate cursurile"
                     >
                       <i className="fa-solid fa-arrow-right"></i>
                     </Link>

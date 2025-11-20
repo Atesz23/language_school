@@ -66,6 +66,7 @@ const BlogSection: React.FC = () => {
                 <Link
                   className="t-btn t-btn-circle"
                   href="/blog"
+                  aria-label="Vezi toate articolele"
                 >
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>
@@ -79,6 +80,7 @@ const BlogSection: React.FC = () => {
                 <Link
                   className="t-btn t-btn-circle"
                   href="/blog"
+                  aria-label="Vezi toate articolele"
                 >
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>
@@ -117,7 +119,8 @@ const BlogSection: React.FC = () => {
                       <div className="btn-wrapper">
                         <Link
                           className="t-btn t-btn-circle"
-                          href={`/blog/${post.slug}`}>
+                          href={`/blog/${post.slug}`}
+                          aria-label={`Citește articolul ${post.title}`}>
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                       </div>

@@ -78,12 +78,14 @@ const TestimonialSection:React.FC<TestimonialProps> = ({data:testimonialData}) =
                   <div
                     className="testimonial-button-prev slide-nav-button"
                     role="button"
+                    aria-label="Mărturie anterioară"
                   >
                     <i className="fa-solid fa-arrow-left"></i>
                   </div>
                   <div
                     className="testimonial-button-next slide-nav-button"
                     role="button"
+                    aria-label="Mărturie următoare"
                   >
                     <i className="fa-solid fa-arrow-right"></i>
                   </div>

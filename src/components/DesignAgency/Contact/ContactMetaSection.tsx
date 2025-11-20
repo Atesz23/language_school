@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import ProtectedEmail from "@/components/common/ProtectedEmail";
 
 const ContactMetaSection: React.FC = () => {
   return (
@@ -20,9 +23,12 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="mailto:office@languagecenter.ro">office@languagecenter.ro</Link>
+                          <ProtectedEmail
+                            user={btoa("office")}
+                            domain={btoa("languagecenter.ro")}
+                          />
                         </li>
-                       
+
                       </ul>
                     </div>
                   </div>
@@ -92,9 +98,12 @@ const ContactMetaSection: React.FC = () => {
                     <div className="meta-list">
                       <ul>
                         <li>
-                          <Link href="mailto:officecluj@languagecenter.ro">officecluj@languagecenter.ro</Link>
+                          <ProtectedEmail
+                            user={btoa("officecluj")}
+                            domain={btoa("languagecenter.ro")}
+                          />
                         </li>
-                        
+
                       </ul>
                     </div>
                   </div>

@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import sidebarData from "@/constant/DesignAgency/sidebar/sidebarData";
 import NestedAccordion from "@/components/DesignAgency/common/NestedAccordion";
+import ProtectedEmail from "@/components/common/ProtectedEmail";
 
 interface SideBarProps {
   isOpen: boolean;
@@ -37,6 +38,7 @@ const Sidebar = ({
                 id="side-info-close"
                 className="side-info-close"
                 onClick={handleSidebar}
+                aria-label="Închide meniul"
               >
                 <i className={sidebarData.closeIcon}></i>
               </button>
@@ -66,9 +68,10 @@ const Sidebar = ({
                 </div>
                 <div className="contact-item">
                   <span className="text">
-                    <a href={sidebarData?.contact?.email?.href} onClick={handleLinkClick}>
-                      {sidebarData?.contact?.email?.text}
-                    </a>
+                    <ProtectedEmail
+                      user={sidebarData?.contact?.email?.emailUser}
+                      domain={sidebarData?.contact?.email?.emailDomain}
+                    />
                   </span>
                 </div>
                 <div className="contact-item">

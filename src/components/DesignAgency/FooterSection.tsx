@@ -36,6 +36,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                   <Link
                     className="t-btn t-btn-circle"
                     href={footerData?.cta?.href || "/"}
+                    aria-label={footerData?.cta?.btnText}
                   >
                     <i className={footerData?.cta?.icon}></i>
                   </Link>
@@ -48,6 +49,7 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                   <Link
                     className="t-btn t-btn-circle"
                     href={footerData?.cta?.href || "/"}
+                    aria-label={footerData?.cta?.btnText}
                   >
                     <i className={footerData?.cta?.icon}></i>
                   </Link>
@@ -74,12 +76,21 @@ const FooterSection: React.FC<FooterSectionProps> = ({data:footerData}) => {
                   <p className="text">{footerData?.description}</p>
                 </div>
                 <div className="social-links">
-                  {footerData?.social?.map((item:IFooterSocial, i:number) => (
-                   <Link key={i} href={item?.link}>
+                  {footerData?.social?.map((item:IFooterSocial, i:number) => {
+                    const socialNames: Record<string, string> = {
+                      'fa-facebook-f': 'Facebook',
+                      'fa-instagram': 'Instagram',
+                      'fa-youtube': 'YouTube',
+                      'fa-tiktok': 'TikTok'
+                    };
+                    const socialName = socialNames[item?.icon] || 'Social Media';
+                    return (
+                      <Link key={i} href={item?.link} aria-label={socialName}>
                         <i className={`fa-brands ${item?.icon}`}></i>
                       </Link>
-                  ))}
-                   
+                    );
+                  })}
+
                 </div>
               </div>
             </div>

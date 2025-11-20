@@ -160,7 +160,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <div className="header-offcanvas d-xl-none">
-                <button className="side-toggle" onClick={handleSidebar}>
+                <button className="side-toggle" onClick={handleSidebar} aria-label="Deschide meniul">
                   <i className="fa-solid fa-bars"></i>
                 </button>
               </div>

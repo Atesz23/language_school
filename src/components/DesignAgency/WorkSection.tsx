@@ -136,25 +136,27 @@ const GallerySection: React.FC = () => {
                     <div
                       className="work-button-prev slide-nav-button"
                       role="button"
+                      aria-label="Imagine anterioară"
                     >
                       <i className="fa-solid fa-arrow-left"></i>
                     </div>
                     <div
                       className="work-button-next slide-nav-button"
                       role="button"
+                      aria-label="Imagine următoare"
                     >
                       <i className="fa-solid fa-arrow-right"></i>
                     </div>
                   </div>
                   <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
                     <div className="t-btn-group">
-                      <Link className="t-btn t-btn-circle" href="/contact">
+                      <Link className="t-btn t-btn-circle" href="/contact" aria-label="Contactează-ne">
                         <i className="fa-solid fa-arrow-right"></i>
                       </Link>
-                      <Link className="t-btn t-btn-primary" href="/contact">       
+                      <Link className="t-btn t-btn-primary" href="/contact">
 Contactează-ne
                       </Link>
-                      <Link className="t-btn t-btn-circle" href="/contact">
+                      <Link className="t-btn t-btn-circle" href="/contact" aria-label="Contactează-ne">
                         <i className="fa-solid fa-arrow-right"></i>
                       </Link>
                     </div>

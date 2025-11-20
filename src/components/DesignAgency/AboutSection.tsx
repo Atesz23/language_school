@@ -73,6 +73,7 @@ const AboutSection: React.FC = () => {
                     className="t-btn t-btn-circle"
                     href="/about"
                     suppressHydrationWarning={true}
+                    aria-label="Află mai multe despre noi"
                   >
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
@@ -87,6 +88,7 @@ const AboutSection: React.FC = () => {
                     className="t-btn t-btn-circle"
                     href="/about"
                     suppressHydrationWarning={true}
+                    aria-label="Află mai multe despre noi"
                   >
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>

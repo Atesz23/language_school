@@ -14,9 +14,14 @@ export interface SidebarContactItem {
   href: string;
 }
 
+export interface SidebarEmailItem {
+  emailUser: string;
+  emailDomain: string;
+}
+
 export interface SidebarContact {
   phone: SidebarContactItem;
-  email: SidebarContactItem;
+  email: SidebarEmailItem;
   address: string;
 }
 
@@ -69,7 +74,10 @@ const sidebar: SidebarData = {
   ],
   contact: {
     phone: { text: "+40 769 049 473", href: "tel:+40769049473" },
-    email: { text: "office@languagecenter.ro", href: "office@languagecenter.ro" },
+    email: {
+      emailUser: btoa("office"),
+      emailDomain: btoa("languagecenter.ro")
+    },
     address: "Târgu Mureș,str. Dr. Knöpfler Vilmos nr. 2-4,",
   },
   social: [
