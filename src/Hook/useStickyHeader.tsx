@@ -6,28 +6,41 @@ const useStickyHeader = (): void => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    let lastScrollTop = 500;
+    let lastScrollTop = 0;
+    let ticking = false;
     const header = document.querySelector<HTMLElement>(".header-sticky");
 
     const onScroll = () => {
-      if (!header) return;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (!header) {
+            ticking = false;
+            return;
+          }
 
-      const currentScrollTop = window.scrollY || window.pageYOffset;
+          const currentScrollTop = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
 
-      if (currentScrollTop > lastScrollTop) {
-        header.classList.remove("sticky");
-        header.classList.add("transformed");
-      } else if (currentScrollTop <= 500) {
-        header.classList.remove("sticky", "transformed");
-      } else {
-        header.classList.add("sticky");
-        header.classList.remove("transformed");
+          if (currentScrollTop <= 100) {
+            // Tetején vagyunk - normál header
+            header.classList.remove("header-fixed", "header-hidden");
+          } else if (currentScrollTop > lastScrollTop) {
+            // Lefelé görgetünk - header elrejtése
+            header.classList.add("header-fixed", "header-hidden");
+          } else {
+            // Felfelé görgetünk - header megjelenítése
+            header.classList.add("header-fixed");
+            header.classList.remove("header-hidden");
+          }
+
+          lastScrollTop = currentScrollTop;
+          ticking = false;
+        });
+
+        ticking = true;
       }
-
-      lastScrollTop = currentScrollTop;
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", onScroll);

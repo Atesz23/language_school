@@ -8,7 +8,6 @@ interface StructuredDataProps {
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', data }) => {
   const getOrganizationSchema = () => ({
-    "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "@id": "https://www.languagecenter.ro/#organization",
     "name": "Language Center Cluj & Mureș",
@@ -168,7 +167,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', 
   });
 
   const getLocalBusinessSchema = () => ({
-    "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.languagecenter.ro/#localbusiness",
     "name": "Language Center Cluj & Mureș",
@@ -224,7 +222,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', 
   });
 
   const getBreadcrumbSchema = () => ({
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -261,7 +258,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', 
   });
 
   const getWebsiteSchema = () => ({
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.languagecenter.ro/#website",
     "url": "https://www.languagecenter.ro",
@@ -285,6 +281,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', 
     switch (type) {
       case 'organization':
         return {
+          "@context": "https://schema.org",
           "@graph": [
             getOrganizationSchema(),
             getLocalBusinessSchema(),
@@ -293,11 +290,20 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'organization', 
           ]
         };
       case 'localBusiness':
-        return getLocalBusinessSchema();
+        return {
+          "@context": "https://schema.org",
+          ...getLocalBusinessSchema()
+        };
       case 'educational':
-        return getOrganizationSchema();
+        return {
+          "@context": "https://schema.org",
+          ...getOrganizationSchema()
+        };
       default:
-        return getOrganizationSchema();
+        return {
+          "@context": "https://schema.org",
+          ...getOrganizationSchema()
+        };
     }
   };
 
