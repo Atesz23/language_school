@@ -5,6 +5,7 @@ import BrandSection from "@/components/DesignAgency/BrandSection";
 import HeroSection from "@/components/DesignAgency/HeroSection";
 import InfoSection from "@/components/DesignAgency/InfoSection";
 import ProcessSection from "@/components/DesignAgency/ProcessSection";
+import ChristmasModal from "@/components/common/ChristmasModal";
 
 import TestimonialSection from "@/components/DesignAgency/TestimonialSection";
 import WorkSection from "@/components/DesignAgency/WorkSection";
@@ -106,6 +107,7 @@ export const metadata: Metadata = {
 const Home = (): ReactElement => {
   return (
     <>
+      <ChristmasModal />
       <HeroSection data={heroData} />
 
       <BrandSection data={brandData} />

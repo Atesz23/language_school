@@ -1,0 +1,39 @@
+.christmas-banner {
+  padding: 20px 0;
+  background: linear-gradient(135deg, #1a4d2e 0%, #2d5f3f 100%);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .christmas-banner-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    .christmas-banner-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 0;
+
+    .christmas-banner-wrapper {
+      border-radius: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 0;
+
+    .christmas-banner-wrapper {
+      border-radius: 6px;
+    }
+  }
+}
