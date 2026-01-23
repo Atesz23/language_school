@@ -107,7 +107,7 @@ export const metadata: Metadata = {
 const Home = (): ReactElement => {
   return (
     <>
-      <ChristmasModal />
+      {/* <ChristmasModal /> */}
       <HeroSection data={heroData} />
 
       <BrandSection data={brandData} />
