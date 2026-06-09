@@ -38,7 +38,6 @@ import { Toaster } from "react-hot-toast";
 import "./accessibility.css";
 import "./globals.css";
 
-import ClarityScript from "@/components/ClarityScript";
 import StructuredData from "@/components/SEO/StructuredData";
 
 // Font konfigurálása
@@ -113,32 +112,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
         {/* End Google Tag Manager */}
 
-        {/* CookieScript - betöltés a head-ben */}
-        <Script
-          id="cookiescript"
-          src="https://cdn.cookie-script.com/s/4ebdbf3de0fbb70979d1406c7480c1d4.js"
-          strategy="beforeInteractive"
-          charSet="UTF-8"
-        />
+       
 
-        {/* Google Analytics */}
-        <Script
-          id="google-analytics"
-          src="https://www.googletagmanager.com/gtag/js?id=G-N973VLW5SB"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics-config"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-N973VLW5SB');
-            `
-          }}
-        />
+       
       </head>
       <body
         suppressHydrationWarning={true}
@@ -155,7 +131,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <ClarityScript />
+        {/* <ClarityScript /> */}
         <StructuredData type="organization" />
         <AnimationProvider>
           <div className="body-wrapper body-design-agency">
