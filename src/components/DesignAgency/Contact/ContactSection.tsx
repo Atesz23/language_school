@@ -177,6 +177,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           id="Nume"
                           placeholder="Introduceți numele"
                           value={formData.Nume}
+                          required
                           onChange={handleChange}
                         />
                       </div>
@@ -190,6 +191,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           id="Telefon"
                           placeholder="+40 700 000 000"
                           value={formData.Telefon}
+                          required
                           onChange={handleChange}
                         />
                       </div>
@@ -203,6 +205,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           id="Email"
                           placeholder="exemplu@email.com"
                           value={formData.Email}
+                          required
                           onChange={handleChange}
                         />
                       </div>
@@ -214,6 +217,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           name="Limba"
                           id="Limba"
                           value={formData.Limba}
+                          required
                           onChange={handleChange}
                         >
                           <option value="">Alege limba</option>
@@ -235,6 +239,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           name="Metoda"
                           id="Metoda"
                           value={formData.Metoda}
+                          required
                           onChange={handleChange}
                         >
                           <option value="">Alege metoda</option>
@@ -250,6 +255,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           name="Nivel"
                           id="Nivel"
                           value={formData.Nivel}
+                          required
                           onChange={handleChange}
                         >
                           <option value="">Alege nivelul</option>
@@ -268,6 +274,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           name="Locatie"
                           id="Locatie"
                           value={formData.Locatie}
+                          required
                           onChange={handleChange}
                         >
                           <option value="">Alege locația</option>
@@ -285,6 +292,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                         id="Mesaj"
                         placeholder="Scrie-ne mesajul tău aici..."
                         value={formData.Mesaj}
+                        required
                         onChange={handleChange}
                         rows={5}
                       />
@@ -299,6 +307,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                           id="AcceptTermeni"
                           checked={formData.AcceptTermeni}
                           onChange={handleChange}
+                          required
                           style={{ marginTop: '4px', maxWidth: '16px', cursor: 'pointer' }}
                         />
                         <label htmlFor="AcceptTermeni" style={{ cursor: 'pointer', fontSize: '14px', lineHeight: '1.5' }}>
